@@ -44,8 +44,8 @@ Searches for repositories matching the pattern `ESPRITPI-<Class>`.
 
 **Example:**
 ```bash
-esprit-tracker class-repos 2ING
-# Finds: ESPRITPI-2ING, ESPRITPI-2ING-2024, ESPRITPI-2ING-2025, etc.
+esprit-tracker class-repos 3A
+# Finds: ESPRITPI-3A, ESPRITPI-3A-2024, ESPRITPI-3A-2025, etc.
 ```
 
 ### 3. Exact Mode - Search for exact match
@@ -58,8 +58,8 @@ Searches for an exact repository match `ESPRITPI-<Class>-<Year>`.
 
 **Example:**
 ```bash
-esprit-tracker exact-repo 2ING 2024
-# Finds: ESPRITPI-2ING-2024 (exact match only)
+esprit-tracker exact-repo 3A 2024
+# Finds: ESPRITPI-3A-2024 (exact match only)
 ```
 
 ### 4. Year Mode - Search by year
@@ -73,7 +73,7 @@ Searches for repositories matching the pattern `ESPRITPI-*-<Year>`.
 **Example:**
 ```bash
 esprit-tracker year-repos 2024
-# Finds: ESPRITPI-2ING-2024, ESPRITPI-1CS-2024, etc.
+# Finds: ESPRITPI-3A-2024, ESPRITPI-4TWIN-2024, etc.
 ```
 
 ## GitHub Token (Optional but Recommended)
@@ -107,8 +107,8 @@ The tool displays results in a beautiful table format:
 ┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
 ┃ Repository Name    ┃ Owner    ┃ Stars ┃ URL                 ┃
 ┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
-│ ESPRITPI-2ING-2024 │ student1 │     5 │ https://github.com… │
-│ ESPRITPI-1CS-2024  │ student2 │     3 │ https://github.com… │
+│ ESPRITPI-3A-2024 │ foulen │     5 │ https://github.com… │
+│ ESPRITPI-4TWIN-2024  │ ahmed mohsen │     3 │ https://github.com… │
 └────────────────────┴──────────┴───────┴─────────────────────┘
 
 Total repositories found: 2
