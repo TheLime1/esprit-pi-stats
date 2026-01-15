@@ -70,9 +70,11 @@ def fetch_github_repos(query: str, per_page: int = 100) -> List[dict]:
                 
             all_repos.extend(repos)
             
-            # Check if there are more pages using total_count
+            # Check if there are more pages
+            # GitHub Search API limits results to 1000 items max
+            # Also break if we get fewer items than requested (last page)
             total_count = data.get("total_count", 0)
-            if len(all_repos) >= total_count:
+            if len(all_repos) >= min(total_count, 1000) or len(repos) < per_page:
                 break
                 
             page += 1
