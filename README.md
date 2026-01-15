@@ -1,6 +1,6 @@
 # esprit-pi-stats
 
-A Python CLI tool to search and track GitHub repositories starting with `ESPRITPI`.
+A Python CLI tool to search and track ESPRIT projects.
 
 <img width="1216" height="668" alt="WindowsTerminal_In9I76Bbik" src="https://github.com/user-attachments/assets/a91255b5-9c54-479a-a089-cf3e5e28691c" />
 
