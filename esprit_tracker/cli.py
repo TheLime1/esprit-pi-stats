@@ -70,21 +70,34 @@ def fetch_github_repos(query: str, per_page: int = 100) -> List[dict]:
                 
             all_repos.extend(repos)
             
-            # Check if there are more pages
-            if len(repos) < per_page:
+            # Check if there are more pages using total_count
+            total_count = data.get("total_count", 0)
+            if len(all_repos) >= total_count:
                 break
                 
             page += 1
             
-        except requests.RequestException as e:
-            if "403" in str(e) or "rate limit" in str(e).lower():
-                console.print(
-                    "[red]Error: GitHub API rate limit reached.[/red]\n"
-                    "[yellow]Tip: Set GITHUB_TOKEN environment variable to increase rate limits.[/yellow]\n"
-                    "[yellow]Example: export GITHUB_TOKEN=your_github_token[/yellow]"
-                )
+        except requests.HTTPError as e:
+            # Check response status code for specific errors
+            if e.response is not None:
+                if e.response.status_code == 403:
+                    console.print(
+                        "[red]Error: GitHub API rate limit reached.[/red]\n"
+                        "[yellow]Tip: Set GITHUB_TOKEN environment variable to increase rate limits.[/yellow]\n"
+                        "[yellow]Example: export GITHUB_TOKEN=your_github_token[/yellow]"
+                    )
+                elif e.response.status_code == 422:
+                    console.print(
+                        "[red]Error: Invalid search query.[/red]\n"
+                        f"[yellow]Details: {e.response.json().get('message', 'Unknown error')}[/yellow]"
+                    )
+                else:
+                    console.print(f"[red]HTTP Error {e.response.status_code}: {e}[/red]")
             else:
                 console.print(f"[red]Error fetching repositories: {e}[/red]")
+            break
+        except requests.RequestException as e:
+            console.print(f"[red]Error fetching repositories: {e}[/red]")
             break
     
     return all_repos
