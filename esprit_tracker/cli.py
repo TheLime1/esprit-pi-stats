@@ -77,7 +77,7 @@ def fetch_github_repos(query: str, per_page: int = 100) -> List[dict]:
                 
             page += 1
             
-        except requests.HTTPError as e:
+        except requests.exceptions.HTTPError as e:
             # Check response status code for specific errors
             if e.response is not None:
                 if e.response.status_code == 403:
@@ -96,7 +96,7 @@ def fetch_github_repos(query: str, per_page: int = 100) -> List[dict]:
             else:
                 console.print(f"[red]Error fetching repositories: {e}[/red]")
             break
-        except requests.RequestException as e:
+        except requests.exceptions.RequestException as e:
             console.print(f"[red]Error fetching repositories: {e}[/red]")
             break
     
