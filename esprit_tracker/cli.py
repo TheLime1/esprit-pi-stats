@@ -2,7 +2,7 @@
 
 import os
 import re
-from typing import List, Optional
+from typing import List
 
 import requests
 import typer
@@ -23,12 +23,15 @@ ESPRIT_PI_ASCII = r"""
 
 def get_github_headers() -> dict:
     """Get headers for GitHub API requests, including token if available."""
-    headers = {"Accept": "application/vnd.github.v3+json"}
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
     
     # Check for GitHub token in environment variable
     token = os.environ.get("GITHUB_TOKEN")
     if token:
-        headers["Authorization"] = f"token {token}"
+        headers["Authorization"] = f"Bearer {token}"
     
     return headers
 
