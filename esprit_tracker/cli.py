@@ -133,15 +133,15 @@ def filter_repos_by_pattern(repos: List[dict], pattern: str, exact_match: bool =
 
 
 def search_all_mode() -> List[dict]:
-    """Search for all repositories starting with ESPRITPI."""
-    query = "ESPRITPI in:name"
+    """Search for all repositories starting with ESPRIT-PI."""
+    query = "ESPRIT-PI in:name"
     repos = fetch_github_repos(query)
-    return filter_repos_by_pattern(repos, "ESPRITPI")
+    return filter_repos_by_pattern(repos, "ESPRIT-PI")
 
 
 def search_class_mode(class_name: str) -> List[dict]:
     """
-    Search for repositories matching ESPRITPI-<Class> pattern.
+    Search for repositories matching ESPRIT-PI-<Class> pattern.
     
     Args:
         class_name: The class name to search for
@@ -149,15 +149,15 @@ def search_class_mode(class_name: str) -> List[dict]:
     Returns:
         Filtered list of repositories
     """
-    query = f"ESPRITPI-{class_name} in:name"
+    query = f"ESPRIT-PI-{class_name} in:name"
     repos = fetch_github_repos(query)
-    pattern = f"ESPRITPI-{class_name}"
+    pattern = f"ESPRIT-PI-{class_name}"
     return filter_repos_by_pattern(repos, pattern)
 
 
 def search_exact_mode(class_name: str, year: str) -> List[dict]:
     """
-    Search for exact repository match ESPRITPI-<Class>-<Year>.
+    Search for exact repository match ESPRIT-PI-<Class>-<Year>.
     
     Args:
         class_name: The class name
@@ -166,15 +166,15 @@ def search_exact_mode(class_name: str, year: str) -> List[dict]:
     Returns:
         Filtered list of repositories
     """
-    query = f"ESPRITPI-{class_name}-{year} in:name"
+    query = f"ESPRIT-PI-{class_name}-{year} in:name"
     repos = fetch_github_repos(query)
-    pattern = f"ESPRITPI-{class_name}-{year}"
+    pattern = f"ESPRIT-PI-{class_name}-{year}"
     return filter_repos_by_pattern(repos, pattern, exact_match=True)
 
 
 def search_year_mode(year: str) -> List[dict]:
     """
-    Search for repositories matching ESPRITPI-*-<Year> pattern.
+    Search for repositories matching ESPRIT-PI-*-<Year> pattern.
     
     Args:
         year: The year to search for
@@ -182,11 +182,11 @@ def search_year_mode(year: str) -> List[dict]:
     Returns:
         Filtered list of repositories
     """
-    query = f"ESPRITPI {year} in:name"
+    query = f"ESPRIT-PI {year} in:name"
     repos = fetch_github_repos(query)
     
-    # Filter for repos that match ESPRITPI-*-<Year> pattern
-    pattern = re.compile(rf"^ESPRITPI-.+-{year}$", re.IGNORECASE)
+    # Filter for repos that match ESPRIT-PI-*-<Year> pattern
+    pattern = re.compile(rf"^ESPRIT-PI-.+-{year}$", re.IGNORECASE)
     filtered = [repo for repo in repos if pattern.match(repo.get("name", ""))]
     
     return filtered
@@ -219,9 +219,9 @@ def display_results(repos: List[dict]) -> None:
 
 @app.command()
 def all_repos():
-    """Search for all repositories starting with ESPRITPI."""
+    """Search for all repositories starting with ESPRIT-PI."""
     console.print(ESPRIT_PI_ASCII, style="bold blue")
-    console.print("[bold]Searching for all ESPRITPI repositories...[/bold]\n")
+    console.print("[bold]Searching for all ESPRIT-PI repositories...[/bold]\n")
     
     repos = search_all_mode()
     display_results(repos)
@@ -230,13 +230,13 @@ def all_repos():
 @app.command()
 def class_repos(class_name: str):
     """
-    Search for repositories matching ESPRITPI-<Class> pattern.
+    Search for repositories matching ESPRIT-PI-<Class> pattern.
     
     Args:
         class_name: The class name to search for (e.g., "2ING", "1CS")
     """
     console.print(ESPRIT_PI_ASCII, style="bold blue")
-    console.print(f"[bold]Searching for ESPRITPI-{class_name} repositories...[/bold]\n")
+    console.print(f"[bold]Searching for ESPRIT-PI-{class_name} repositories...[/bold]\n")
     
     repos = search_class_mode(class_name)
     display_results(repos)
@@ -245,14 +245,14 @@ def class_repos(class_name: str):
 @app.command()
 def exact_repo(class_name: str, year: str):
     """
-    Search for exact repository match ESPRITPI-<Class>-<Year>.
+    Search for exact repository match ESPRIT-PI-<Class>-<Year>.
     
     Args:
         class_name: The class name (e.g., "2ING", "1CS")
         year: The year (e.g., "2024", "2025")
     """
     console.print(ESPRIT_PI_ASCII, style="bold blue")
-    console.print(f"[bold]Searching for exact match: ESPRITPI-{class_name}-{year}[/bold]\n")
+    console.print(f"[bold]Searching for exact match: ESPRIT-PI-{class_name}-{year}[/bold]\n")
     
     repos = search_exact_mode(class_name, year)
     display_results(repos)
@@ -261,13 +261,13 @@ def exact_repo(class_name: str, year: str):
 @app.command()
 def year_repos(year: str):
     """
-    Search for repositories matching ESPRITPI-*-<Year> pattern.
+    Search for repositories matching ESPRIT-PI-*-<Year> pattern.
     
     Args:
         year: The year to search for (e.g., "2024", "2025")
     """
     console.print(ESPRIT_PI_ASCII, style="bold blue")
-    console.print(f"[bold]Searching for all ESPRITPI repositories from year {year}...[/bold]\n")
+    console.print(f"[bold]Searching for all ESPRIT-PI repositories from year {year}...[/bold]\n")
     
     repos = search_year_mode(year)
     display_results(repos)
@@ -278,13 +278,13 @@ def main(ctx: typer.Context):
     """
     ESPRIT-PI Repository Tracker.
     
-    A CLI tool to search and track GitHub repositories starting with ESPRITPI.
+    A CLI tool to search and track GitHub repositories starting with ESPRIT-PI.
     
     Use one of the commands to search in different modes:
-    - all-repos: Search all ESPRITPI repositories
-    - class-repos: Search by class (ESPRITPI-<Class>)
-    - exact-repo: Search exact match (ESPRITPI-<Class>-<Year>)
-    - year-repos: Search by year (ESPRITPI-*-<Year>)
+    - all-repos: Search all ESPRIT-PI repositories
+    - class-repos: Search by class (ESPRIT-PI-<Class>)
+    - exact-repo: Search exact match (ESPRIT-PI-<Class>-<Year>)
+    - year-repos: Search by year (ESPRIT-PI-*-<Year>)
     """
     if ctx.invoked_subcommand is None:
         # If no subcommand is provided, show ASCII art and help
