@@ -90,6 +90,32 @@ def search_all_mode():
     return valid
 
 
+def search_by_class(classe: str):
+    repos = search_all_mode()
+    filtered = []
+
+    for repo in repos:
+        info = extract_repo_info(repo["name"])
+        if info and info.get("classe", "").lower() == classe.lower():
+            filtered.append(repo)
+
+    console.print(f"[bold]Found {len(filtered)} repositories for class {classe}[/bold]")
+    return filtered
+
+
+def search_by_pi(pi: str):
+    repos = search_all_mode()
+    filtered = []
+
+    for repo in repos:
+        info = extract_repo_info(repo["name"])
+        if info and info.get("pi", "").lower() == pi.lower():
+            filtered.append(repo)
+
+    console.print(f"[bold]Found {len(filtered)} repositories for PI {pi}[/bold]")
+    return filtered
+
+
 def display_results(repos):
     table = Table(title="ESPRIT Repositories")
 
@@ -97,6 +123,7 @@ def display_results(repos):
     table.add_column("PI")
     table.add_column("Classe")
     table.add_column("AU")
+    table.add_column("Stars")
     table.add_column("Owner")
     table.add_column("URL")
 
@@ -108,6 +135,7 @@ def display_results(repos):
             info.get("pi", "N/A"),
             info.get("classe", "N/A"),
             info.get("annee", "N/A"),
+            str(repo.get("stargazers_count", 0)),
             repo["owner"]["login"],
             repo["html_url"],
         )
@@ -125,6 +153,20 @@ def all_repos():
 @app.command()
 def repo(name: str):
     repos = fetch_github_repos(f"{name} in:name")
+    display_results(repos)
+
+
+@app.command("class-repos")
+def class_repos(classe: str):
+    """Class mode - search repositories by class code."""
+    repos = search_by_class(classe)
+    display_results(repos)
+
+
+@app.command("pi-repos")
+def pi_repos(pi: str):
+    """PI mode - search repositories by PI name/code (e.g. PIDEV)."""
+    repos = search_by_pi(pi)
     display_results(repos)
 
 
