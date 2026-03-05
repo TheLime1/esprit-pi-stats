@@ -14,6 +14,15 @@ from rich.text import Text
 app = typer.Typer()
 console = Console()
 
+
+ESPRIT_PI_ASCII = r"""
+  _____ ____  ____  ____  ___ _____      ____ ___ 
+ | ____/ ___||  _ \|  _ \|_ _|_   _|    |  _ \_ _|
+ |  _| \___ \| |_) | |_) || |  | |_____ | |_) | | 
+ | |___ ___) |  __/|  _ < | |  | |_____||  __/| | 
+ |_____|____/|_|   |_| \_\___| |_|      |_|  |___|
+"""
+
 # Format :
 # Esprit-[PI]-[Classe]-[AU]-[NomDuProjet]
 REPO_PATTERN = re.compile(
@@ -334,6 +343,15 @@ def display_org_results(orgs):
 
     console.print(table)
     console.print(f"\nTotal organizations found: {len(orgs)}\n")
+
+
+@app.callback(invoke_without_command=True)
+def main(ctx: typer.Context):
+    """ESPRIT PI - Track GitHub repositories and organizations."""
+    if ctx.invoked_subcommand is None:
+        console.print(ESPRIT_PI_ASCII)
+        raise typer.Exit(0)
+    console.print(ESPRIT_PI_ASCII + "\n")
 
 
 @app.command()
