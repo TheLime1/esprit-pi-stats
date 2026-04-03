@@ -1,0 +1,39 @@
+name: Update Repository Data
+
+on:
+  schedule:
+    # Runs every Monday at 06:00 UTC
+    - cron: "0 6 * * 1"
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -e .
+
+      - name: Run esprit-tracker export
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: esprit-tracker all-repos --json docs/data.json
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data.json
+          git diff --cached --quiet || git commit -m "chore: update repository data [skip ci]"
+          git push
