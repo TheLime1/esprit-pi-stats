@@ -31,6 +31,10 @@
             <nav class="nav">
                 <button class="nav-btn active" data-target="tab-repos">Repositories</button>
                 <button class="nav-btn" data-target="tab-numbers">Numbers</button>
+                <button class="nav-btn guide-btn" id="openGuideBtn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    Add my project
+                </button>
                 <button class="nav-btn presentation-toggle" id="startPresentationBtn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                     Present
@@ -60,11 +64,10 @@
                 Updated weekly with live stats, contributors, and more.
             </p>
             <div class="hero-actions">
-                <button class="btn btn-primary" onclick="document.querySelector('[data-target=tab-repos]').click()">
+                <button class="btn btn-primary" id="heroBrowseBtn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     Browse Repos
                 </button>
-                <button class="btn btn-secondary" onclick="document.querySelector('[data-target=tab-numbers]').click()">View Stats</button>
             </div>
         </div>
         <div class="hero-art">
@@ -253,6 +256,140 @@
             <button class="slide-nav-btn next" id="nextSlideBtn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
             </button>
+        </div>
+    </div>
+
+    <!-- Naming Guide Modal -->
+    <div class="guide-overlay" id="guideOverlay">
+        <div class="guide-modal">
+            <button class="guide-close" id="closeGuideBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <div class="guide-header">
+                <span class="guide-badge">CONTRIBUTION GUIDE</span>
+                <h2>How to show your project here?</h2>
+                <p>Name your GitHub repository following the ESPRIT PI naming convention — it will be automatically discovered and listed here every week.</p>
+            </div>
+
+            <!-- Interactive Name Breakdown -->
+            <div class="guide-name-display">
+                <div class="name-segments">
+                    <div class="seg" tabindex="0">
+                        <span class="seg-text">ESPRIT</span>
+                        <div class="seg-tooltip">
+                            <div class="tooltip-color" style="background:#c90c0f"></div>
+                            <div>
+                                <strong>School Prefix</strong>
+                                <p>Always starts with <code>ESPRIT</code> — this is mandatory for auto-discovery.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="seg-dash">-</span>
+                    <div class="seg" tabindex="0">
+                        <span class="seg-text">PI</span>
+                        <div class="seg-tooltip">
+                            <div class="tooltip-color" style="background:#e8383b"></div>
+                            <div>
+                                <strong>Project Type</strong>
+                                <p>Depends on your program track.</p>
+                                <div class="tooltip-examples">
+                                    <span>PI</span><span>PIDEV</span><span>PIWEB</span><span>PIDS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="seg-dash">-</span>
+                    <div class="seg" tabindex="0">
+                        <span class="seg-text">4SAE11</span>
+                        <div class="seg-tooltip">
+                            <div class="tooltip-color" style="background:#ff7b7d"></div>
+                            <div>
+                                <strong>Your Class</strong>
+                                <p>Combines <em>year</em> + <em>speciality</em> + <em>group</em>.</p>
+                                <div class="tooltip-breakdown">
+                                    <span><em>4</em>&nbsp;=&nbsp;Year</span>
+                                    <span><em>SAE</em>&nbsp;=&nbsp;Speciality</span>
+                                    <span><em>11</em>&nbsp;=&nbsp;Group</span>
+                                </div>
+                                <div class="tooltip-examples">
+                                    <span>3A14</span><span>4TWIN7</span><span>4DS5</span><span>4INFINI3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="seg-dash">-</span>
+                    <div class="seg" tabindex="0">
+                        <span class="seg-text">2526</span>
+                        <div class="seg-tooltip">
+                            <div class="tooltip-color" style="background:#bdbcbc"></div>
+                            <div>
+                                <strong>Academic Year</strong>
+                                <p>Shorthand form: <code>2025-2026</code> → <code>2526</code>.</p>
+                                <div class="tooltip-examples">
+                                    <span>2526</span><span>2025-2026</span><span>2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="seg-dash">-</span>
+                    <div class="seg seg-project" tabindex="0">
+                        <span class="seg-text">ProjectName</span>
+                        <div class="seg-tooltip seg-tooltip-left">
+                            <div class="tooltip-color" style="background:#c90c0f"></div>
+                            <div>
+                                <strong>Your Project Name</strong>
+                                <p>Unique, memorable name. Use PascalCase.</p>
+                                <div class="tooltip-examples">
+                                    <span>AgriFlow</span><span>ByteBattle</span><span>MindCare</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="guide-hover-hint">↑ Hover or tap each segment to learn more</p>
+            </div>
+
+            <!-- Live Preview Builder -->
+            <div class="guide-builder">
+                <h3>Build your repo name</h3>
+                <div class="builder-fields">
+                    <div class="builder-field">
+                        <label>Type</label>
+                        <select id="builderType">
+                            <option value="PI">PI</option>
+                            <option value="PIDEV" selected>PIDEV</option>
+                            <option value="PIWEB">PIWEB</option>
+                            <option value="PIDS">PIDS</option>
+                        </select>
+                    </div>
+                    <div class="builder-field">
+                        <label>Class</label>
+                        <input type="text" id="builderClass" placeholder="e.g. 4SAE11" maxlength="15">
+                    </div>
+                    <div class="builder-field">
+                        <label>Year</label>
+                        <input type="text" id="builderYear" placeholder="e.g. 2526" maxlength="9" value="2526">
+                    </div>
+                    <div class="builder-field builder-field-wide">
+                        <label>Project Name</label>
+                        <input type="text" id="builderName" placeholder="e.g. AgriFlow" maxlength="40">
+                    </div>
+                </div>
+                <div class="builder-preview">
+                    <span class="builder-label">Your repo name:</span>
+                    <code id="builderOutput">ESPRIT-PIDEV-<em>CLASS</em>-2526-<em>ProjectName</em></code>
+                    <button class="builder-copy" id="builderCopyBtn" title="Copy to clipboard">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy
+                    </button>
+                </div>
+            </div>
+
+            <div class="guide-footer-note">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Make your repository <strong>public</strong> on GitHub — private repos won't be discovered.
+            </div>
         </div>
     </div>
 

@@ -1048,3 +1048,425 @@ body.theme-light .sun-icon { display: none; }
 .repo-card {
     animation: fadeUp 0.4s ease both;
 }
+
+/* ---- BTN GHOST (hero guide button) ---- */
+.btn-ghost {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-strong);
+    gap: 6px;
+}
+.btn-ghost:hover {
+    background: var(--border-color);
+    color: var(--text-main);
+    border-color: var(--red);
+}
+
+/* ---- GUIDE NAV BUTTON ---- */
+.guide-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(201, 12, 15, 0.06);
+    color: var(--text-muted);
+    border: 1px dashed rgba(201, 12, 15, 0.35);
+}
+.guide-btn:hover {
+    background: rgba(201, 12, 15, 0.12);
+    color: var(--red-light);
+    border-style: solid;
+}
+
+/* ========================================
+   NAMING GUIDE MODAL
+   ======================================== */
+.guide-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.guide-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.guide-modal {
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 780px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
+}
+.guide-overlay.active .guide-modal {
+    transform: translateY(0) scale(1);
+}
+
+/* Close button */
+.guide-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--border-color);
+    border: none;
+    color: var(--text-muted);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.guide-close:hover {
+    background: rgba(201, 12, 15, 0.15);
+    color: var(--red-light);
+}
+
+/* Header */
+.guide-header { margin-bottom: 32px; }
+.guide-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    background: rgba(201, 12, 15, 0.12);
+    border: 1px solid rgba(201, 12, 15, 0.3);
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--red-light);
+    margin-bottom: 12px;
+}
+.guide-header h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+.guide-header p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Name display with interactive segments */
+.guide-name-display {
+    background: var(--bg-main);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    padding: 32px 24px 20px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.name-segments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.seg-dash {
+    color: var(--text-muted-dim);
+    font-size: 1.6rem;
+    font-family: var(--font-mono);
+    font-weight: 300;
+    line-height: 1;
+    user-select: none;
+}
+
+.seg {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 6px 10px;
+    transition: var(--transition);
+    outline: none;
+}
+
+.seg-text {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: -0.02em;
+    display: block;
+    transition: var(--transition);
+}
+
+/* Each segment gets a distinct color-coded underline */
+.seg:nth-child(1) .seg-text { color: #c90c0f; }
+.seg:nth-child(3) .seg-text { color: #e8383b; }
+.seg:nth-child(5) .seg-text { color: #ff7b7d; }
+.seg:nth-child(7) .seg-text { color: var(--text-muted); }
+.seg:nth-child(9) .seg-text { color: var(--red-light); }
+
+.seg:hover .seg-text,
+.seg:focus .seg-text {
+    transform: translateY(-2px);
+}
+
+.seg:nth-child(1):hover, .seg:nth-child(1):focus { background: rgba(201, 12, 15, 0.08); }
+.seg:nth-child(3):hover, .seg:nth-child(3):focus { background: rgba(232, 56, 59, 0.08); }
+.seg:nth-child(5):hover, .seg:nth-child(5):focus { background: rgba(255, 123, 125, 0.08); }
+.seg:nth-child(7):hover, .seg:nth-child(7):focus { background: rgba(189, 188, 188, 0.08); }
+.seg:nth-child(9):hover, .seg:nth-child(9):focus { background: rgba(201, 12, 15, 0.08); }
+
+/* Tooltip */
+.seg-tooltip {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    padding: 14px 16px;
+    min-width: 220px;
+    max-width: 280px;
+    z-index: 100;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    text-align: left;
+    animation: tooltipIn 0.2s ease;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.seg:hover .seg-tooltip,
+.seg:focus .seg-tooltip {
+    display: flex;
+}
+
+/* Tooltip that flips leftward on last segment */
+.seg-tooltip-left {
+    left: auto;
+    right: 0;
+    transform: none;
+}
+
+@keyframes tooltipIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+.seg-tooltip-left { animation: tooltipInLeft 0.2s ease; }
+@keyframes tooltipInLeft {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.tooltip-color {
+    width: 4px;
+    min-height: 100%;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.seg-tooltip strong {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+.seg-tooltip p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0 0 8px;
+}
+.seg-tooltip code {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    background: var(--bg-main);
+    padding: 1px 4px;
+    border-radius: 4px;
+    color: var(--red-light);
+}
+
+.tooltip-breakdown {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+.tooltip-breakdown span {
+    font-size: 0.75rem;
+    color: var(--text-muted-dim);
+    background: var(--bg-main);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.tooltip-breakdown em {
+    font-style: normal;
+    color: var(--red-light);
+    font-weight: 700;
+}
+
+.tooltip-examples {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.tooltip-examples span {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    background: rgba(201, 12, 15, 0.1);
+    color: var(--red-light);
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(201, 12, 15, 0.2);
+}
+
+.guide-hover-hint {
+    font-size: 0.75rem;
+    color: var(--text-muted-dim);
+    margin-top: 8px;
+}
+
+/* Builder section */
+.guide-builder {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+.guide-builder h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 16px;
+}
+
+.builder-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.builder-field-wide { grid-column: span 1; }
+
+.builder-field label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted-dim);
+    margin-bottom: 6px;
+}
+
+.builder-field input,
+.builder-field select {
+    width: 100%;
+    padding: 8px 12px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--text-main);
+    font-size: 0.875rem;
+    font-family: var(--font-mono);
+    outline: none;
+    transition: var(--transition);
+}
+.builder-field input:focus,
+.builder-field select:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(201, 12, 15, 0.12);
+}
+.builder-field select option { background: var(--bg-card); }
+
+.builder-preview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: var(--bg-card);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+}
+.builder-label {
+    font-size: 0.75rem;
+    color: var(--text-muted-dim);
+    white-space: nowrap;
+    font-weight: 600;
+}
+.builder-preview code {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-main);
+    flex: 1;
+    word-break: break-all;
+}
+.builder-preview code em {
+    font-style: normal;
+    color: var(--text-muted-dim);
+}
+.builder-copy {
+    background: var(--red);
+    border: none;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+.builder-copy:hover {
+    background: var(--red-light);
+    transform: translateY(-1px);
+}
+.builder-copy.copied {
+    background: #1a7a3c;
+}
+
+/* Footer note */
+.guide-footer-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;
+    background: rgba(26, 122, 60, 0.08);
+    border: 1px solid rgba(26, 122, 60, 0.25);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.guide-footer-note svg { color: #4ade80; flex-shrink: 0; margin-top: 1px; }
+.guide-footer-note strong { color: var(--text-main); }
+
+/* Responsive builder */
+@media (max-width: 640px) {
+    .builder-fields { grid-template-columns: 1fr 1fr; }
+    .guide-modal { padding: 24px 20px; }
+    .seg-text { font-size: 1rem; }
+    .seg-dash { font-size: 1rem; }
+    .seg-tooltip { min-width: 180px; }
+    .guide-header h2 { font-size: 1.4rem; }
+}
