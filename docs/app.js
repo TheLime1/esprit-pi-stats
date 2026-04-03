@@ -1,6 +1,7 @@
 /* =============================================
    ESPRIT PI Stats — Application Logic
-   Loads data.json and renders the repo cards
+   Loads data.json and renders the repo cards, 
+   charts, and handles UI interactions.
    ============================================= */
 
 // ---- CONFIG ----
@@ -10,6 +11,9 @@ const DATA_URL = './data.json';
 // ---- STATE ----
 let allRepos = [];
 let currentSort = 'name';
+let chartsRendered = false;
+let currentSlideIndex = 0;
+const totalSlides = 5;
 
 // ---- DOM ----
 const reposGrid      = document.getElementById('reposGrid');
@@ -23,6 +27,23 @@ const totalContribEl = document.getElementById('totalContributors');
 const totalStarsEl   = document.getElementById('totalStars');
 const totalOwnersEl  = document.getElementById('totalOwners');
 const lastUpdatedEl  = document.getElementById('lastUpdated');
+
+// Navigation Tabs
+const navBtns = document.querySelectorAll('.nav-btn[data-target]');
+const tabPanes = document.querySelectorAll('.tab-pane');
+const mainContent = document.getElementById('mainContent');
+
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+
+// Presentation Mode
+const presentationOverlay = document.getElementById('presentationOverlay');
+const startPresentationBtn = document.getElementById('startPresentationBtn');
+const closePresentationBtn = document.getElementById('closePresentationBtn');
+const prevSlideBtn = document.getElementById('prevSlideBtn');
+const nextSlideBtn = document.getElementById('nextSlideBtn');
+const slideIndicatorsContainer = document.getElementById('slideIndicators');
+const slides = document.querySelectorAll('.slide');
 
 // ---- UTILS ----
 function formatDate(iso) {
@@ -45,7 +66,13 @@ function animateCount(el, target) {
     requestAnimationFrame(step);
 }
 
-// ---- RENDER ----
+// Extract Class from Repo Name
+function extractClass(name) {
+    const parts = name.split('-');
+    return parts.length >= 3 ? parts[2] : 'Other';
+}
+
+// ---- RENDER STATS ----
 function renderStats(repos) {
     const totalStars = repos.reduce((s, r) => s + (r.stars || 0), 0);
     const allContribs = new Set();
@@ -60,8 +87,135 @@ function renderStats(repos) {
     animateCount(totalContribEl, allContribs.size);
     animateCount(totalStarsEl, totalStars);
     animateCount(totalOwnersEl, allOwners.size);
+    
+    // Setup Presentation slides data
+    document.getElementById('slideTotalRepos').textContent = repos.length;
+    document.getElementById('slideTotalStars').textContent = totalStars;
+    document.getElementById('slideTotalContribs').textContent = allContribs.size;
+    
+    // Top repo
+    if(repos.length > 0) {
+        let topRepo = [...repos].sort((a,b) => (b.stars || 0) - (a.stars || 0))[0];
+        document.getElementById('slideTopRepo').textContent = topRepo.name;
+        document.getElementById('slideTopRepoStars').textContent = `${topRepo.stars} Stars`;
+        
+        let mostCollab = [...repos].sort((a,b) => (b.contributors?.length || 0) - (a.contributors?.length || 0))[0];
+        document.getElementById('mostCollabRepo').textContent = mostCollab.name;
+        document.getElementById('mostCollabCount').textContent = `${mostCollab.contributors?.length || 0} contributors`;
+        
+        document.getElementById('avgStars').textContent = (totalStars / repos.length).toFixed(1);
+        
+        let latest = [...repos].sort((a,b) => new Date(b.created_at) - new Date(a.created_at))[0];
+        document.getElementById('latestRepo').textContent = latest.name;
+        document.getElementById('latestRepoDate').textContent = formatDate(latest.created_at);
+        
+        // Count Classes
+        let classTally = {};
+        repos.forEach(r => { 
+            let c = extractClass(r.name);
+            classTally[c] = (classTally[c] || 0) + 1;
+        });
+        let topClassEntry = Object.entries(classTally).sort((a,b) => b[1] - a[1])[0];
+        if(topClassEntry) {
+            document.getElementById('slideTopClass').textContent = topClassEntry[0];
+            document.getElementById('slideTopClassCount').textContent = `${topClassEntry[1]} Repositories`;
+        }
+    }
 }
 
+// ---- RENDER CHARTS ----
+function renderCharts(repos) {
+    if(chartsRendered) return;
+    
+    // Get colors based on theme
+    const isDark = document.body.classList.contains('theme-dark');
+    const textColor = isDark ? '#f5f5f4' : '#1d1d1b';
+    const gridColor = isDark ? 'rgba(189, 188, 188, 0.1)' : 'rgba(29, 29, 27, 0.1)';
+    const primaryColor = '#c90c0f';
+    const primaryGlow = 'rgba(201, 12, 15, 0.6)';
+
+    Chart.defaults.color = textColor;
+    Chart.defaults.font.family = "'Inter', sans-serif";
+
+    // 1. Top 5 Stars
+    const topStars = [...repos].sort((a,b) => (b.stars||0) - (a.stars||0)).slice(0, 5);
+    new Chart(document.getElementById('starsChart'), {
+        type: 'bar',
+        data: {
+            labels: topStars.map(r => r.name.length > 20 ? r.name.substring(0, 20)+'...' : r.name),
+            datasets: [{
+                label: 'Stars',
+                data: topStars.map(r => r.stars),
+                backgroundColor: primaryColor,
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            scales: { y: { beginAtZero: true, grid: { color: gridColor } }, x: { grid: { display: false } } },
+            plugins: { legend: { display: false } }
+        }
+    });
+
+    // 2. Class Distribution
+    let classCounts = {};
+    repos.forEach(r => {
+        let cls = extractClass(r.name);
+        classCounts[cls] = (classCounts[cls] || 0) + 1;
+    });
+    // Sort and limit to top 6 classes
+    let sortedClasses = Object.entries(classCounts).sort((a,b)=>b[1]-a[1]);
+    let topClasses = sortedClasses.slice(0, 6);
+    let topLabels = topClasses.map(x=>x[0]);
+    let topData = topClasses.map(x=>x[1]);
+    
+    new Chart(document.getElementById('classChart'), {
+        type: 'doughnut',
+        data: {
+            labels: topLabels,
+            datasets: [{
+                data: topData,
+                backgroundColor: [primaryColor, '#e8383b', '#ff7b7d', '#bdbcbc', '#737373', '#404040'],
+                borderWidth: 0
+            }]
+        },
+        options: { responsive: true, maintainAspectRatio: false, cutout: '70%' }
+    });
+
+    // 3. Top Contributors across all repos
+    let cCounts = {};
+    repos.forEach(r => {
+        (r.contributors||[]).forEach(c => {
+            cCounts[c] = (cCounts[c] || 0) + 1;
+        });
+    });
+    let topContribs = Object.entries(cCounts).sort((a,b)=>b[1]-a[1]).slice(0, 5);
+    
+    new Chart(document.getElementById('contribsChart'), {
+        type: 'bar',
+        data: {
+            labels: topContribs.map(x=>x[0]),
+            datasets: [{
+                label: 'Repositories contributed to',
+                data: topContribs.map(x=>x[1]),
+                backgroundColor: primaryGlow,
+                borderColor: primaryColor,
+                borderWidth: 1,
+                borderRadius: 4
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true, maintainAspectRatio: false,
+            scales: { x: { beginAtZero: true, grid: { color: gridColor }, ticks: { stepSize: 1 } }, y: { grid: { display: false } } },
+            plugins: { legend: { display: false } }
+        }
+    });
+
+    chartsRendered = true;
+}
+
+// ---- REPO CARDS ----
 function createCard(repo, index) {
     const contribs = repo.contributors || [];
     const showMax = 4;
@@ -172,6 +326,31 @@ function filterAndRender() {
 }
 
 // ---- EVENTS ----
+
+// Tabs logic
+navBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        
+        navBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        tabPanes.forEach(pane => {
+            if(pane.id === targetId) {
+                pane.classList.add('active');
+            } else {
+                pane.classList.remove('active');
+            }
+        });
+        
+        // Lazy load charts when clicking numbers tab
+        if(targetId === 'tab-numbers') {
+            renderCharts(allRepos);
+        }
+    });
+});
+
+// Search & Sort filters
 searchInput.addEventListener('input', filterAndRender);
 
 filterBtns.forEach(btn => {
@@ -183,21 +362,106 @@ filterBtns.forEach(btn => {
     });
 });
 
-// Keyboard shortcut: / focuses search
+// Presentation Mode Logic
+function showSlide(index) {
+    slides.forEach((sl, i) => {
+        sl.classList.toggle('active', i === index);
+    });
+    document.querySelectorAll('.slide-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+// Generate dots
+for(let i=0; i<totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.className = i===0 ? 'slide-dot active' : 'slide-dot';
+    dot.addEventListener('click', () => { currentSlideIndex = i; showSlide(currentSlideIndex); });
+    slideIndicatorsContainer.appendChild(dot);
+}
+
+startPresentationBtn.addEventListener('click', () => {
+    presentationOverlay.classList.add('active');
+    currentSlideIndex = 0;
+    showSlide(currentSlideIndex);
+});
+
+closePresentationBtn.addEventListener('click', () => {
+    presentationOverlay.classList.remove('active');
+});
+
+prevSlideBtn.addEventListener('click', () => {
+    currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlideIndex);
+});
+
+nextSlideBtn.addEventListener('click', () => {
+    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+    showSlide(currentSlideIndex);
+});
+
+// Theme Toggle
+function setTheme(isDark) {
+    if(isDark) {
+        document.body.classList.add('theme-dark');
+        document.body.classList.remove('theme-light');
+    } else {
+        document.body.classList.add('theme-light');
+        document.body.classList.remove('theme-dark');
+    }
+    localStorage.setItem('esprit-theme', isDark ? 'dark' : 'light');
+    
+    // Destroy and re-render charts completely to apply new colors
+    if(chartsRendered) {
+        // Find existing charts and destroy
+        Object.values(Chart.instances).forEach(chart => chart.destroy());
+        chartsRendered = false;
+        if(document.getElementById('tab-numbers').classList.contains('active')) {
+             renderCharts(allRepos);
+        }
+    }
+}
+
+themeToggle.addEventListener('click', () => {
+    const isCurrentlyDark = document.body.classList.contains('theme-dark');
+    setTheme(!isCurrentlyDark);
+});
+
+// Keyboard shortcuts
 document.addEventListener('keydown', (e) => {
-    if (e.key === '/' && document.activeElement !== searchInput) {
+    // Search focus
+    if (e.key === '/' && document.activeElement !== searchInput && !presentationOverlay.classList.contains('active')) {
         e.preventDefault();
         searchInput.focus();
     }
+    // Escape handles search clear or close presentation
     if (e.key === 'Escape') {
-        searchInput.value = '';
-        searchInput.blur();
-        filterAndRender();
+        if(presentationOverlay.classList.contains('active')) {
+            presentationOverlay.classList.remove('active');
+        } else {
+             searchInput.value = '';
+             searchInput.blur();
+             filterAndRender();
+        }
+    }
+    // Presentation arrows
+    if(presentationOverlay.classList.contains('active')) {
+        if(e.key === 'ArrowRight') {
+            nextSlideBtn.click();
+        } else if (e.key === 'ArrowLeft') {
+            prevSlideBtn.click();
+        }
     }
 });
 
+
 // ---- INIT ----
 async function init() {
+    // Load saved theme
+    const savedTheme = localStorage.getItem('esprit-theme');
+    if(savedTheme === 'light') setTheme(false); // defaults to dark
+    else setTheme(true);
+
     try {
         const res = await fetch(DATA_URL);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -205,6 +469,7 @@ async function init() {
 
         allRepos = data.repositories || [];
         loading.style.display = 'none';
+        mainContent.style.display = 'block';
 
         renderStats(allRepos);
         filterAndRender();
@@ -215,7 +480,7 @@ async function init() {
     } catch (err) {
         loading.innerHTML = `
             <p style="color: var(--red-light);">Failed to load data</p>
-            <p style="font-size: 0.82rem; color: var(--muted-dim);">
+            <p style="font-size: 0.82rem; color: var(--text-muted-dim);">
                 Make sure <code>data.json</code> exists in the docs folder.<br>
                 Run: <code>esprit-tracker all-repos --json docs/data.json</code>
             </p>
