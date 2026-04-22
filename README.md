@@ -1,8 +1,6 @@
-# esprit-pi-stats
+# Esprit-PI-Repositories-Tracker
 
-A Python CLI tool to search and track ESPRIT projects.
-
-<img width="1216" height="668" alt="WindowsTerminal_In9I76Bbik" src="https://github.com/user-attachments/assets/a91255b5-9c54-479a-a089-cf3e5e28691c" />
+A website and A Python CLI tool to search and track ESPRIT projects.
 
 ## Features
 
@@ -50,33 +48,20 @@ esprit-tracker class-repos 3A
 # Finds: ESPRITPI-3A, ESPRITPI-3A-2024, ESPRITPI-3A-2025, etc.
 ```
 
-### 3. Exact Mode - Search for exact match
+
+### 3. Pi Mode - Search by PI
 
 ```bash
-esprit-tracker exact-repo <Class> <Year>
+esprit-tracker pi-repos <PI>
 ```
 
-Searches for an exact repository match `ESPRITPI-<Class>-<Year>`.
+Searches for repositories matching the pattern `ESPRITPI-<PI>`.
 
 **Example:**
 ```bash
-esprit-tracker exact-repo 3A 2024
-# Finds: ESPRITPI-3A-2024 (exact match only)
+esprit-tracker pi-repos PIDEV
 ```
 
-### 4. Year Mode - Search by year
-
-```bash
-esprit-tracker year-repos <Year>
-```
-
-Searches for repositories matching the pattern `ESPRITPI-*-<Year>`.
-
-**Example:**
-```bash
-esprit-tracker year-repos 2024
-# Finds: ESPRITPI-3A-2024, ESPRITPI-4TWIN-2024, etc.
-```
 
 ## GitHub Token (Optional but Recommended)
 
@@ -97,24 +82,6 @@ Without a token, you may encounter rate limiting (60 requests/hour). With a toke
 ## Output
 
 The tool displays results in a beautiful table format:
-
-```
-  _____ ____  ____  ____  ___ _____      ____ ___ 
- | ____/ ___||  _ \|  _ \|_ _|_   _|    |  _ \_ _|
- |  _| \___ \| |_) | |_) || |  | |_____ | |_) | | 
- | |___ ___) |  __/|  _ < | |  | |_____||  __/| | 
- |_____|____/|_|   |_| \_\___| |_|      |_|  |___|
-
-                    ESPRIT-PI Repositories                    
-┏━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━┓
-┃ Repository Name    ┃ Owner      ┃ Stars ┃ URL                 ┃
-┡━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━┩
-│ ESPRITPI-3A-2024   │ Foulen     │     5 │ https://github.com… │
-│ ESPRITPI-4TWIN-2024│Ahmed Mohsen│     3 │ https://github.com… │
-└────────────────────┴━━━━━━━━━━━━┴━━━━━━━┴─────────────────────┘
-
-Total repositories found: 2
-```
 
 ## Technical Details
 
