@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-27T08:07:01.791921Z",
-  "total": 335,
+  "generated_at": "2026-05-04T08:19:40.749551Z",
+  "total": 348,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -18,6 +18,7 @@
       "contributors": [
         "rayen-sebai-1",
         "Dhiac7",
+        "fourat24",
         "AhmedBouhlel69"
       ],
       "stars": 0,
@@ -154,7 +155,8 @@
       "contributors": [
         "skander101",
         "iramtrabelsi3",
-        "Youssefsellami1"
+        "Youssefsellami1",
+        "bouzid20"
       ],
       "stars": 0,
       "url": "https://github.com/skander101/ESPRIT-PIDEV-WEB-3A27-2026-Bizhub",
@@ -174,9 +176,9 @@
       "name": "ESPRIT-PIDEVJAVA-3A61-2026-EDULINK",
       "owner": "kerneldali",
       "contributors": [
+        "yassinezar",
         "alibelhadjali",
         "Mahdiabidi03",
-        "yassinezar",
         "Taki-mejri",
         "dallouza",
         "kerneldali"
@@ -207,9 +209,9 @@
       "contributors": [
         "sinda15960",
         "azlouknada",
+        "hajerbentemessek792-tech",
         "sarraA43",
-        "cyrnesboui1",
-        "hajerbentemessek792-tech"
+        "cyrnesboui1"
       ],
       "stars": 0,
       "url": "https://github.com/sinda15960/Esprit-PI-2A29-2526-AlimentationDurable",
@@ -353,8 +355,8 @@
       "name": "Esprit-PI-4DATA-2026-6G-SmartCity-IDS",
       "owner": "ahmed-karray",
       "contributors": [
-        "anasYaha",
         "ahmed-karray",
+        "anasYaha",
         "z-a-h-r-a",
         "tasnim-dev-ux",
         "ramiklouz"
@@ -422,6 +424,19 @@
       "stars": 0,
       "url": "https://github.com/Hajer5503/Esprit-PI-4DS5-AgriSmart",
       "created_at": "2026-02-08T18:42:22Z"
+    },
+    {
+      "name": "Esprit-PI-4DS9-2526-ARDHI",
+      "owner": "chamseddinedoulaEsprit",
+      "contributors": [
+        "chamseddinedoulaEsprit",
+        "NajdRahmani",
+        "AdemMarghli",
+        "chaimabnfarhat"
+      ],
+      "stars": 0,
+      "url": "https://github.com/chamseddinedoulaEsprit/Esprit-PI-4DS9-2526-ARDHI",
+      "created_at": "2026-03-03T10:21:06Z"
     },
     {
       "name": "Esprit-PI-4DS9-2526-ATHENAPLULSE",
@@ -510,12 +525,25 @@
       "name": "Esprit-PI-4SAE2-2025-EverCare",
       "owner": "eyadabbaghi",
       "contributors": [
+        "BadrFTW",
         "eyadabbaghi",
-        "BadrFTW"
+        "MissFlawless",
+        "achrefjb99"
       ],
       "stars": 1,
       "url": "https://github.com/eyadabbaghi/Esprit-PI-4SAE2-2025-EverCare",
       "created_at": "2026-02-04T16:15:00Z"
+    },
+    {
+      "name": "Esprit-PI-4SAE4-2526-JungleInEnglish",
+      "owner": "SaidiAziz",
+      "contributors": [
+        "SaidiAziz",
+        "M-chaa"
+      ],
+      "stars": 0,
+      "url": "https://github.com/SaidiAziz/Esprit-PI-4SAE4-2526-JungleInEnglish",
+      "created_at": "2026-02-28T15:53:35Z"
     },
     {
       "name": "Esprit-PI-4SAE6-2026-mind-care",
@@ -585,11 +613,25 @@
       "created_at": "2026-02-17T13:33:14Z"
     },
     {
+      "name": "Esprit-PI-4TWIN5-2526-BusinessSaaS",
+      "owner": "business-saas-platform",
+      "contributors": [
+        "chtrihab",
+        "azizrahouej",
+        "Yomna-Gharssellaoui",
+        "jemi3i"
+      ],
+      "stars": 1,
+      "url": "https://github.com/business-saas-platform/Esprit-PI-4TWIN5-2526-BusinessSaaS",
+      "created_at": "2026-01-27T19:46:15Z"
+    },
+    {
       "name": "Esprit-PI-4TWIN7-25-26--ByteBattle",
       "owner": "Mahdi1-1",
       "contributors": [
         "figma[bot]",
         "Mahdi1-1",
+        "khaloul",
         "mahdimasmoudi1",
         "sabri-trabelsi"
       ],
@@ -656,7 +698,9 @@
     {
       "name": "Esprit-PI-4twin6-2026-CodeMasters",
       "owner": "Alaatahri",
-      "contributors": [],
+      "contributors": [
+        "SyrineJedidi"
+      ],
       "stars": 0,
       "url": "https://github.com/Alaatahri/Esprit-PI-4twin6-2026-CodeMasters",
       "created_at": "2026-01-23T14:07:17Z"
@@ -778,6 +822,16 @@
       "stars": 0,
       "url": "https://github.com/selimabll1/Esprit-PIDEV-2025-4INFINI3-Helma",
       "created_at": "2026-03-30T10:18:41Z"
+    },
+    {
+      "name": "Esprit-PIDEV-2025-4INFINI3-Helma-Deployment",
+      "owner": "Gharbi-Git",
+      "contributors": [
+        "Gharbi-Git"
+      ],
+      "stars": 0,
+      "url": "https://github.com/Gharbi-Git/Esprit-PIDEV-2025-4INFINI3-Helma-Deployment",
+      "created_at": "2026-05-03T19:11:17Z"
     },
     {
       "name": "Esprit-PIDEV-2A-2026-DigitEra",
@@ -1007,6 +1061,16 @@
       "created_at": "2026-04-06T09:11:51Z"
     },
     {
+      "name": "Esprit-PIDEV-3A12-2526-Cashfly",
+      "owner": "moatez-ouislati",
+      "contributors": [
+        "moatez-ouislati"
+      ],
+      "stars": 0,
+      "url": "https://github.com/moatez-ouislati/Esprit-PIDEV-3A12-2526-Cashfly",
+      "created_at": "2026-02-08T19:41:10Z"
+    },
+    {
       "name": "Esprit-PIDEV-3A13-2526-CampusLink",
       "owner": "mohamedMoujib",
       "contributors": [
@@ -1072,8 +1136,7 @@
       "name": "Esprit-PIDEV-3A15-2526-NAFSEYTI",
       "owner": "ranimbenr12",
       "contributors": [
-        "ranimbenr12",
-        "sirine277"
+        "ranimeb"
       ],
       "stars": 0,
       "url": "https://github.com/ranimbenr12/Esprit-PIDEV-3A15-2526-NAFSEYTI",
@@ -1100,7 +1163,7 @@
         "wrldomar",
         "ManaiFares"
       ],
-      "stars": 3,
+      "stars": 4,
       "url": "https://github.com/Azer-khadhraoui/Esprit-PIDEV-3A17--2026-VOS-web",
       "created_at": "2026-04-03T22:37:08Z"
     },
@@ -1263,7 +1326,9 @@
       "name": "Esprit-PIDEV-3A22-2526-Agrifund-Web",
       "owner": "RanaJaffel",
       "contributors": [
-        "Souleima18"
+        "RanaJaffel",
+        "Souleima18",
+        "chedyderouiche"
       ],
       "stars": 0,
       "url": "https://github.com/RanaJaffel/Esprit-PIDEV-3A22-2526-Agrifund-Web",
@@ -1337,12 +1402,16 @@
       "created_at": "2026-02-15T21:55:08Z"
     },
     {
-      "name": "Esprit-PIDEV-3A24-2526-Harmonie-Activite",
-      "owner": "maryemmakni",
-      "contributors": [],
+      "name": "Esprit-PIDEV-3A24-2526-Harmonie",
+      "owner": "Rayen-gmati",
+      "contributors": [
+        "Rayen-gmati",
+        "mayssaferjeni",
+        "Saaaiiif"
+      ],
       "stars": 0,
-      "url": "https://github.com/maryemmakni/Esprit-PIDEV-3A24-2526-Harmonie-Activite",
-      "created_at": "2026-04-10T10:40:03Z"
+      "url": "https://github.com/Rayen-gmati/Esprit-PIDEV-3A24-2526-Harmonie",
+      "created_at": "2026-04-29T09:23:37Z"
     },
     {
       "name": "Esprit-PIDEV-3A24-2526-MatchN-Team",
@@ -1352,8 +1421,8 @@
         "bochraDammak",
         "elfoulena",
         "AmenAllahAmri",
-        "medamineallouche",
-        "Chiheb404"
+        "Chiheb404",
+        "medamineallouche"
       ],
       "stars": 0,
       "url": "https://github.com/elfoulena/Esprit-PIDEV-3A24-2526-MatchN-Team",
@@ -1374,12 +1443,12 @@
       "name": "Esprit-PIDEV-3A24-2526-stratixWeb",
       "owner": "islemalibii",
       "contributors": [
-        "islemalibii",
-        "Tahahamdouni",
-        "rahmaa-maker",
-        "eyaa-zarai",
         "amenioueslati22",
-        "soltabiryhab"
+        "islemalibii",
+        "rahmaa-maker",
+        "Tahahamdouni",
+        "soltabiryhab",
+        "eyaa-zarai"
       ],
       "stars": 0,
       "url": "https://github.com/islemalibii/Esprit-PIDEV-3A24-2526-stratixWeb",
@@ -1392,8 +1461,8 @@
         "Haifa-gaied",
         "AmiraMatteli",
         "MayssemChouria",
-        "moncef-bensalem",
-        "sarraaroua"
+        "sarraaroua",
+        "moncef-bensalem"
       ],
       "stars": 0,
       "url": "https://github.com/moncef-bensalem/Esprit-PIDEV-3A25-2526-Nexus",
@@ -1405,7 +1474,9 @@
       "contributors": [
         "Gl3diator",
         "ZouariOmar",
-        "MalekBdah"
+        "MalekBdah",
+        "Safa2025",
+        "saif11234"
       ],
       "stars": 2,
       "url": "https://github.com/Gl3diator/Esprit-PIDEV-3A25-2526-Serinity",
@@ -1489,9 +1560,7 @@
       "name": "Esprit-PIDEV-3A28-2526-Advisora",
       "owner": "scrup",
       "contributors": [
-        "scrup",
-        "nidhal-zneti",
-        "lyynda1"
+        "scrup"
       ],
       "stars": 0,
       "url": "https://github.com/scrup/Esprit-PIDEV-3A28-2526-Advisora",
@@ -1633,6 +1702,7 @@
       "contributors": [
         "TF3K",
         "CodeWithHoussem",
+        "Chaim2",
         "yasmine732"
       ],
       "stars": 1,
@@ -2203,9 +2273,11 @@
       "name": "Esprit-PIDEV-3A48-2526-SmartPFE",
       "owner": "ranimouhibi",
       "contributors": [
+        "ranimouhibi",
         "Malekknani287",
         "Kacem-Mab",
-        "ranimouhibi"
+        "belkadhimanef",
+        "mayssemsh4"
       ],
       "stars": 0,
       "url": "https://github.com/ranimouhibi/Esprit-PIDEV-3A48-2526-SmartPFE",
@@ -2321,9 +2393,9 @@
       "owner": "RouaZribi203",
       "contributors": [
         "khalilll13",
-        "myriambouziri",
         "KhadijaChaar",
         "salimbenb04",
+        "myriambouziri",
         "RouaZribi203"
       ],
       "stars": 0,
@@ -2712,20 +2784,6 @@
       "created_at": "2026-02-05T20:59:09Z"
     },
     {
-      "name": "Esprit-PIDEV-3TWIN3--2026-Smartproperty",
-      "owner": "smartproperty-team",
-      "contributors": [
-        "waeldaagi",
-        "emnamess",
-        "tahaliouene",
-        "ismail-belhoula",
-        "Hamdibr7"
-      ],
-      "stars": 0,
-      "url": "https://github.com/smartproperty-team/Esprit-PIDEV-3TWIN3--2026-Smartproperty",
-      "created_at": "2026-01-28T10:24:19Z"
-    },
-    {
       "name": "Esprit-PIDEV-4ASAE5-2026-WallStreetEnglish-CareerService-MS",
       "owner": "fatmasboui",
       "contributors": [],
@@ -2785,8 +2843,8 @@
         "hmem-nasma",
         "oumayma-01",
         "bnadem39",
-        "mohamed15032003",
         "linasahbani2",
+        "mohamed15032003",
         "EMNABH1"
       ],
       "stars": 2,
@@ -2858,11 +2916,24 @@
       "created_at": "2026-01-23T18:16:27Z"
     },
     {
+      "name": "Esprit-PIDEV-4SAE10-2026-PediaNephro",
+      "owner": "azizbenmo",
+      "contributors": [
+        "azizbenmo"
+      ],
+      "stars": 0,
+      "url": "https://github.com/azizbenmo/Esprit-PIDEV-4SAE10-2026-PediaNephro",
+      "created_at": "2026-04-27T18:09:50Z"
+    },
+    {
       "name": "Esprit-PIDEV-4SAE3-2026-Freelancy",
       "owner": "arij34",
       "contributors": [
         "arij34",
-        "malekbensaid"
+        "syrine1506",
+        "Ameny323",
+        "malekbensaid",
+        "hamourabi2107"
       ],
       "stars": 0,
       "url": "https://github.com/arij34/Esprit-PIDEV-4SAE3-2026-Freelancy",
@@ -2915,7 +2986,8 @@
       "owner": "alinajjaa",
       "contributors": [
         "TheWrench9",
-        "alinajjaa"
+        "alinajjaa",
+        "louzeinej"
       ],
       "stars": 0,
       "url": "https://github.com/alinajjaa/Esprit-PIDEV-4SAE4-2026-COGNIVITA",
@@ -2925,7 +2997,11 @@
       "name": "Esprit-PIDEV-4SAE4-2026-EnglishSchoolManagement",
       "owner": "firastourki",
       "contributors": [
-        "firastourki"
+        "akremargoubi",
+        "firastourki",
+        "kamelhamdi07",
+        "rayenkarouch",
+        "yousseffadaoui"
       ],
       "stars": 1,
       "url": "https://github.com/firastourki/Esprit-PIDEV-4SAE4-2026-EnglishSchoolManagement",
@@ -3013,8 +3089,9 @@
       "owner": "rouamenaa",
       "contributors": [
         "rouamenaa",
-        "Waellllll",
         "MouhamedAzizAroua11",
+        "Waellllll",
+        "nassim-rf",
         "salimmahdi",
         "nassimrafrafi"
       ],
@@ -3025,7 +3102,11 @@
     {
       "name": "Esprit-PIDEV-4SAE8-2526-NeuroGuard",
       "owner": "saifeddinefrikhi-lab",
-      "contributors": [],
+      "contributors": [
+        "eyaezdine",
+        "saifeddinefrikhi-lab",
+        "trabelsiNour123"
+      ],
       "stars": 0,
       "url": "https://github.com/saifeddinefrikhi-lab/Esprit-PIDEV-4SAE8-2526-NeuroGuard",
       "created_at": "2026-02-15T18:12:29Z"
@@ -3070,7 +3151,7 @@
     },
     {
       "name": "Esprit-PIDEV-4TWIN2-2026-DeepSkyn",
-      "owner": "fadhlaouinassef",
+      "owner": "mostfa-charfedin",
       "contributors": [
         "fadhlaouinassef",
         "souhirKrizi",
@@ -3078,15 +3159,31 @@
         "AyoubEsprit",
         "mostfa-charfedin"
       ],
-      "stars": 4,
-      "url": "https://github.com/fadhlaouinassef/Esprit-PIDEV-4TWIN2-2026-DeepSkyn",
-      "created_at": "2026-01-31T10:44:05Z"
+      "stars": 0,
+      "url": "https://github.com/mostfa-charfedin/Esprit-PIDEV-4TWIN2-2026-DeepSkyn",
+      "created_at": "2026-04-26T17:21:40Z"
+    },
+    {
+      "name": "Esprit-PIDEV-4TWIN3--2026-Smartproperty",
+      "owner": "smartproperty-team",
+      "contributors": [
+        "waeldaagi",
+        "emnamess",
+        "tahaliouene",
+        "ismail-belhoula",
+        "Hamdibr7",
+        "Copilot"
+      ],
+      "stars": 0,
+      "url": "https://github.com/smartproperty-team/Esprit-PIDEV-4TWIN3--2026-Smartproperty",
+      "created_at": "2026-01-28T10:24:19Z"
     },
     {
       "name": "Esprit-PIDEV-4TWIN3-2025-2026-TRAFIQ",
       "owner": "Raedchebbi",
       "contributors": [
-        "MalekHayouni"
+        "MalekHayouni",
+        "mohamedkhalil26"
       ],
       "stars": 0,
       "url": "https://github.com/Raedchebbi/Esprit-PIDEV-4TWIN3-2025-2026-TRAFIQ",
@@ -3096,11 +3193,27 @@
       "name": "Esprit-PIDEV-4TWIN3-2026-TaskFlow",
       "owner": "ghassendrira",
       "contributors": [
-        "ghassendrira"
+        "ghassendrira",
+        "krayem1234",
+        "AzizDouagi"
       ],
       "stars": 0,
       "url": "https://github.com/ghassendrira/Esprit-PIDEV-4TWIN3-2026-TaskFlow",
       "created_at": "2026-01-30T20:22:44Z"
+    },
+    {
+      "name": "Esprit-PIDEV-4TWIN5--2026-SmartSite",
+      "owner": "ChedlyRebai",
+      "contributors": [
+        "ChedlyRebai",
+        "mahmoud1234-cmd",
+        "AsmamMh",
+        "DoniaMaazoun",
+        "ghadabannourii"
+      ],
+      "stars": 0,
+      "url": "https://github.com/ChedlyRebai/Esprit-PIDEV-4TWIN5--2026-SmartSite",
+      "created_at": "2026-01-27T13:08:22Z"
     },
     {
       "name": "Esprit-PIDEV-4infini1-2025-2026-SalamaInsurancePlatform",
@@ -3143,7 +3256,7 @@
       "contributors": [
         "HoucemZaier",
         "ihebdhib",
-        "WacelEnnacer",
+        "wacel-nacer",
         "Ghr812"
       ],
       "stars": 0,
@@ -3206,8 +3319,8 @@
         "NeyrouzTM",
         "Brahem-Ahmed",
         "Aya-Hajji",
-        "may532",
-        "samarmanai33"
+        "samarmanai33",
+        "may532"
       ],
       "stars": 0,
       "url": "https://github.com/NeyrouzTM/Esprit-PIDEV_SE-4SE1-2526-MediCareAI",
@@ -3243,11 +3356,27 @@
       "contributors": [
         "ferielguesm",
         "FarahZekri11",
+        "lookism-12",
+        "amenimakdouli",
         "eyaweslati79"
       ],
       "stars": 0,
       "url": "https://github.com/lookism-12/Esprit-PIDEV_SE-4SE2-2526-Espritmarket",
       "created_at": "2026-02-16T21:47:35Z"
+    },
+    {
+      "name": "Esprit-PIDEV_SE-4SE2-2526-Espritmarket1",
+      "owner": "amenimakdouli",
+      "contributors": [
+        "ferielguesm",
+        "FarahZekri11",
+        "eyaweslati79",
+        "Tessa737",
+        "amenimakdouli"
+      ],
+      "stars": 0,
+      "url": "https://github.com/amenimakdouli/Esprit-PIDEV_SE-4SE2-2526-Espritmarket1",
+      "created_at": "2026-05-02T15:29:32Z"
     },
     {
       "name": "Esprit-PIDEV_SE-4SE2-2526-MedicareIA",
@@ -3265,7 +3394,8 @@
       "contributors": [
         "farahdridi03",
         "Aziz216-ui",
-        "israsaadaoui"
+        "israsaadaoui",
+        "wassimzarai"
       ],
       "stars": 0,
       "url": "https://github.com/farahdridi03/Esprit-PIDEV_SE-4SE2-2526-MedicareIAreIAFrontend",
@@ -3368,6 +3498,20 @@
       "created_at": "2026-01-20T11:00:03Z"
     },
     {
+      "name": "Esprit-PIDS-4DS1-2026-agrio",
+      "owner": "hendch",
+      "contributors": [
+        "hendch",
+        "MbarkyLyna",
+        "Yassinebc99",
+        "Dyissi",
+        "khalil-mohamed221"
+      ],
+      "stars": 0,
+      "url": "https://github.com/hendch/Esprit-PIDS-4DS1-2026-agrio",
+      "created_at": "2026-01-21T16:00:33Z"
+    },
+    {
       "name": "Esprit-PIDS-4DS11-2026-Avatar",
       "owner": "RayanAloui",
       "contributors": [
@@ -3376,18 +3520,6 @@
       "stars": 0,
       "url": "https://github.com/RayanAloui/Esprit-PIDS-4DS11-2026-Avatar",
       "created_at": "2026-02-17T21:31:43Z"
-    },
-    {
-      "name": "Esprit-PIDS-4DS2-2026-agrio",
-      "owner": "hendch",
-      "contributors": [
-        "hendch",
-        "MbarkyLyna",
-        "khalil-mohamed221"
-      ],
-      "stars": 0,
-      "url": "https://github.com/hendch/Esprit-PIDS-4DS2-2026-agrio",
-      "created_at": "2026-01-21T16:00:33Z"
     },
     {
       "name": "Esprit-PIDS-4DS4-2026-ESTATEMIND",
@@ -3425,14 +3557,40 @@
       "owner": "Rahmaa-aa",
       "contributors": [
         "khalilhl",
-        "Layyoub",
         "Kacem-Trabelsi",
+        "Layyoub",
         "imen-kh",
         "Rahmaa-aa"
       ],
       "stars": 0,
       "url": "https://github.com/Rahmaa-aa/Esprit-PIFullstackJS-4TWIN1-2026-MediFollow",
       "created_at": "2026-02-15T17:27:44Z"
+    },
+    {
+      "name": "Esprit-PIFullstackJS-4TWIN1-2026-SmartSite-",
+      "owner": "smailch",
+      "contributors": [
+        "mouradmissa",
+        "smailch"
+      ],
+      "stars": 1,
+      "url": "https://github.com/smailch/Esprit-PIFullstackJS-4TWIN1-2026-SmartSite-",
+      "created_at": "2026-02-06T18:56:04Z"
+    },
+    {
+      "name": "Esprit-PIFullstackJS-4TWIN4-2026-IntelligentEmployeeRecommendationSystem",
+      "owner": "souibgui00",
+      "contributors": [
+        "montahaguedhami",
+        "souibgui00",
+        "MrabetSarra",
+        "Copilot",
+        "montaha13",
+        "nedra1"
+      ],
+      "stars": 0,
+      "url": "https://github.com/souibgui00/Esprit-PIFullstackJS-4TWIN4-2026-IntelligentEmployeeRecommendationSystem",
+      "created_at": "2026-02-19T20:55:40Z"
     },
     {
       "name": "Esprit-PIFullstackJS-4TWIN5-2026-LockinMLPlagiarism",
@@ -3490,11 +3648,24 @@
       "created_at": "2026-03-17T12:22:38Z"
     },
     {
+      "name": "Esprit-PIFullstackJs-4TWIN8-2026-SmartSite",
+      "owner": "Jasser1920",
+      "contributors": [
+        "Jasser1920",
+        "GhassenMakri",
+        "hmemali"
+      ],
+      "stars": 0,
+      "url": "https://github.com/Jasser1920/Esprit-PIFullstackJs-4TWIN8-2026-SmartSite",
+      "created_at": "2026-01-28T08:51:48Z"
+    },
+    {
       "name": "Esprit-PIINFINI-4infini2-2526-CrediGuard-BACK",
       "owner": "nadine-chrigui",
       "contributors": [
         "yassmine44",
-        "mokaddemwael"
+        "mokaddemwael",
+        "nadine-chrigui"
       ],
       "stars": 0,
       "url": "https://github.com/nadine-chrigui/Esprit-PIINFINI-4infini2-2526-CrediGuard-BACK",
@@ -3560,6 +3731,14 @@
       "stars": 0,
       "url": "https://github.com/sayhi124/Esprit-PIJAVA-3A57-2026-SmartVoyage",
       "created_at": "2026-04-09T19:09:52Z"
+    },
+    {
+      "name": "Esprit-PIJAVA-3A57-2026-SmartVoyage-V2",
+      "owner": "sayhi124",
+      "contributors": [],
+      "stars": 0,
+      "url": "https://github.com/sayhi124/Esprit-PIJAVA-3A57-2026-SmartVoyage-V2",
+      "created_at": "2026-04-27T15:51:01Z"
     },
     {
       "name": "Esprit-PIJAVA-3A57-2026-SmartVoyage.",
@@ -3661,6 +3840,17 @@
       "created_at": "2026-04-02T22:21:37Z"
     },
     {
+      "name": "Esprit-PI_DEV-3A19-2526-Wanderlust-Partie-I-JavaFx",
+      "owner": "SaidiDhia",
+      "contributors": [
+        "SaidiDhia",
+        "JacerKhlifi-rgb"
+      ],
+      "stars": 0,
+      "url": "https://github.com/SaidiDhia/Esprit-PI_DEV-3A19-2526-Wanderlust-Partie-I-JavaFx",
+      "created_at": "2026-01-24T14:50:17Z"
+    },
+    {
       "name": "Esprit-PI_DEV-3A55-AU-MEDICONNECT",
       "owner": "devloppeurtn",
       "contributors": [
@@ -3730,6 +3920,8 @@
       "owner": "sirineee22",
       "contributors": [
         "Rania-Kz",
+        "nesrrine",
+        "MohamedAliSaadaoui",
         "sirineee22",
         "khalilhaouari",
         "Raniakz",
@@ -3768,6 +3960,7 @@
       "contributors": [
         "khalilsahnoun123",
         "KHLIL2002",
+        "raghadkhedhiri",
         "nadine197"
       ],
       "stars": 0,
