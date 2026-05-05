@@ -45,19 +45,8 @@ const nextSlideBtn = document.getElementById('nextSlideBtn');
 const slideIndicatorsContainer = document.getElementById('slideIndicators');
 const slides = document.querySelectorAll('.slide');
 
-// Guide Modal & Hero buttons
-const guideOverlay   = document.getElementById('guideOverlay');
-const openGuideBtn   = document.getElementById('openGuideBtn');
-const closeGuideBtn  = document.getElementById('closeGuideBtn');
-const heroGuideBtn   = document.getElementById('heroGuideBtn');
+// Hero buttons
 const heroBrowseBtn  = document.getElementById('heroBrowseBtn');
-const heroStatsBtn   = document.getElementById('heroStatsBtn');
-const builderType    = document.getElementById('builderType');
-const builderClass   = document.getElementById('builderClass');
-const builderYear    = document.getElementById('builderYear');
-const builderName    = document.getElementById('builderName');
-const builderOutput  = document.getElementById('builderOutput');
-const builderCopyBtn = document.getElementById('builderCopyBtn');
 
 // ---- UTILS ----
 function formatDate(iso) {
@@ -448,11 +437,9 @@ document.addEventListener('keydown', (e) => {
         e.preventDefault();
         searchInput.focus();
     }
-    // Escape handles search clear, close presentation, or close guide
+    // Escape handles search clear, or close presentation
     if (e.key === 'Escape') {
-        if(guideOverlay && guideOverlay.classList.contains('active')) {
-            closeGuide();
-        } else if(presentationOverlay.classList.contains('active')) {
+        if(presentationOverlay.classList.contains('active')) {
             presentationOverlay.classList.remove('active');
         } else {
              searchInput.value = '';
@@ -471,19 +458,6 @@ document.addEventListener('keydown', (e) => {
 });
 
 
-// ---- GUIDE MODAL ----
-function openGuide() { guideOverlay.classList.add('active'); }
-function closeGuide() { guideOverlay.classList.remove('active'); }
-
-if (openGuideBtn)  openGuideBtn.addEventListener('click', openGuide);
-if (heroGuideBtn)  heroGuideBtn.addEventListener('click', openGuide);
-if (closeGuideBtn) closeGuideBtn.addEventListener('click', closeGuide);
-
-// Close on backdrop click
-guideOverlay.addEventListener('click', (e) => {
-    if (e.target === guideOverlay) closeGuide();
-});
-
 // Fix hero buttons: switch tab AND scroll to content
 function switchToTab(targetId) {
     const btn = document.querySelector(`.nav-btn[data-target="${targetId}"]`);
@@ -493,37 +467,6 @@ function switchToTab(targetId) {
 }
 
 if (heroBrowseBtn) heroBrowseBtn.addEventListener('click', () => switchToTab('tab-repos'));
-if (heroStatsBtn)  heroStatsBtn.addEventListener('click', () => switchToTab('tab-numbers'));
-
-// Live Name Builder
-function updateBuilder() {
-    const type = builderType.value.trim() || 'PIDEV';
-    const cls  = builderClass.value.trim() || '<em>CLASS</em>';
-    const yr   = builderYear.value.trim() || '2526';
-    const name = builderName.value.trim() || '<em>ProjectName</em>';
-
-    // Sanitise - only show em tag for empties
-    const clsHtml  = builderClass.value.trim() ? builderClass.value.trim().toUpperCase() : '<em>CLASS</em>';
-    const nameHtml = builderName.value.trim() ? builderName.value.trim() : '<em>ProjectName</em>';
-
-    builderOutput.innerHTML = `ESPRIT-${type}-${clsHtml}-${yr}-${nameHtml}`;
-}
-
-[builderType, builderClass, builderYear, builderName].forEach(el => {
-    if (el) el.addEventListener('input', updateBuilder);
-});
-
-builderCopyBtn.addEventListener('click', () => {
-    const text = builderOutput.textContent; // strip tags
-    navigator.clipboard.writeText(text).then(() => {
-        builderCopyBtn.classList.add('copied');
-        builderCopyBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!`;
-        setTimeout(() => {
-            builderCopyBtn.classList.remove('copied');
-            builderCopyBtn.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy`;
-        }, 2000);
-    });
-});
 
 // ---- INIT ----
 async function init() {
@@ -533,8 +476,12 @@ async function init() {
     else setTheme(true);
 
     try {
-        const res = await fetch(DATA_URL);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        // Avoid stale caches (GitHub Pages / browser) by disabling cache
+        // and adding a cache-busting query parameter.
+        const cacheBuster = Date.now();
+        const url = `${DATA_URL}?v=${cacheBuster}`;
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`HTTP ${res.status} while fetching ${url}`);
         const data = await res.json();
 
         allRepos = data.repositories || [];
@@ -548,11 +495,18 @@ async function init() {
             lastUpdatedEl.textContent = formatDate(data.generated_at);
         }
     } catch (err) {
+        const isFile = window.location.protocol === 'file:';
+        const hint = isFile
+            ? `You are opening the page via <code>file://</code>. Browsers block <code>fetch()</code> for local files.<br>
+               Serve the <code>docs</code> folder with a local server (e.g. VS Code Live Server) or use GitHub Pages.`
+            : `Open DevTools → Console/Network and check if <code>data.json</code> returns 200 (not 404).`;
+
         loading.innerHTML = `
             <p style="color: var(--red-light);">Failed to load data</p>
             <p style="font-size: 0.82rem; color: var(--text-muted-dim);">
                 Make sure <code>data.json</code> exists in the docs folder.<br>
-                Run: <code>esprit-tracker all-repos --json docs/data.json</code>
+                ${hint}<br><br>
+                If you generate the JSON locally, run: <code>esprit-tracker all-repos --json docs/data.json</code>
             </p>
         `;
         console.error('Failed to load data:', err);
