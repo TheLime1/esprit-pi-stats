@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-25T09:51:14.746322Z",
+  "generated_at": "2026-06-01T11:12:33.072840Z",
   "total": 405,
   "repositories": [
     {
@@ -439,7 +439,8 @@
       "contributors": [
         "OuaragM",
         "nawresbensethom",
-        "MohamedKhaledBH"
+        "MohamedKhaledBH",
+        "MedSlimane"
       ],
       "stars": 0,
       "url": "https://github.com/OuaragM/Esprit-PI-4DATA-2026-6G-Network-Anomaly-Detection",
@@ -4063,10 +4064,10 @@
       "name": "Esprit-PIDS-4DS4-2026-QOS_Buddy",
       "owner": "AzizX25",
       "contributors": [
-        "Amani-hassani",
-        "AzizX25"
+        "AzizX25",
+        "Amani-hassani"
       ],
-      "stars": 1,
+      "stars": 2,
       "url": "https://github.com/AzizX25/Esprit-PIDS-4DS4-2026-QOS_Buddy",
       "created_at": "2026-04-15T15:39:00Z"
     },
