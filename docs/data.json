@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-15T11:48:28.714514Z",
-  "total": 433,
+  "generated_at": "2026-06-22T11:37:25.819523Z",
+  "total": 435,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -501,6 +501,27 @@
       "stars": 0,
       "url": "https://github.com/khalilll13/Esprit-PI-3A52-2526-Artium",
       "created_at": "2026-06-06T16:04:56Z"
+    },
+    {
+      "name": "Esprit-PI-3ALSLEAM1-2026-SmartMunicipalTransport",
+      "owner": "fayrouz-stack",
+      "contributors": [
+        "fayrouz-stack"
+      ],
+      "stars": 0,
+      "url": "https://github.com/fayrouz-stack/Esprit-PI-3ALSLEAM1-2026-SmartMunicipalTransport",
+      "created_at": "2026-04-29T20:32:56Z"
+    },
+    {
+      "name": "Esprit-PI-3ALSLEAM1-2526-EspritConnect",
+      "owner": "Andalusian-oss",
+      "contributors": [
+        "Andalusian-oss",
+        "NefziOumayma"
+      ],
+      "stars": 0,
+      "url": "https://github.com/Andalusian-oss/Esprit-PI-3ALSLEAM1-2526-EspritConnect",
+      "created_at": "2026-05-07T21:23:58Z"
     },
     {
       "name": "Esprit-PI-3IA1-2526-Verify",
@@ -2541,7 +2562,7 @@
       "contributors": [
         "NourGlz"
       ],
-      "stars": 0,
+      "stars": 1,
       "url": "https://github.com/Mazuchii/Esprit-PIDEV-3A37-2026-ArtTN",
       "created_at": "2026-02-07T13:50:49Z"
     },
@@ -3198,7 +3219,7 @@
         "Ha-Said",
         "wisssouni"
       ],
-      "stars": 3,
+      "stars": 4,
       "url": "https://github.com/Nouha11/Esprit-PIDEV-3A56--2026-Nova-Learning-Management-Platform",
       "created_at": "2026-02-04T08:58:01Z"
     },
@@ -3292,17 +3313,6 @@
       "stars": 0,
       "url": "https://github.com/ayoubSL88/Esprit-PIDEV-3A6-2526-MindTrack",
       "created_at": "2026-04-04T01:59:14Z"
-    },
-    {
-      "name": "Esprit-PIDEV-3A62-2026-SosiConnect",
-      "owner": "yassinegab",
-      "contributors": [
-        "yassinegab",
-        "sao7l"
-      ],
-      "stars": 0,
-      "url": "https://github.com/yassinegab/Esprit-PIDEV-3A62-2026-SosiConnect",
-      "created_at": "2026-04-10T08:27:15Z"
     },
     {
       "name": "Esprit-PIDEV-3A63--2026-wannasni",
@@ -3442,15 +3452,29 @@
       "created_at": "2026-03-31T08:32:30Z"
     },
     {
-      "name": "Esprit-PIDEV-3AI62-2026-SosiConnect",
+      "name": "Esprit-PIDEV-3AI6-2026-SosiConnect",
       "owner": "yassinegab",
       "contributors": [
         "yassinegab",
-        "sayarinessrine",
-        "souha-mabrouk"
+        "souha-mabrouk",
+        "sao7l",
+        "sayarinessrine"
       ],
       "stars": 0,
-      "url": "https://github.com/yassinegab/Esprit-PIDEV-3AI62-2026-SosiConnect",
+      "url": "https://github.com/yassinegab/Esprit-PIDEV-3AI6-2026-SosiConnect",
+      "created_at": "2026-04-10T08:27:15Z"
+    },
+    {
+      "name": "Esprit-PIDEV-3AI6-2026-SosiConnectS",
+      "owner": "yassinegab",
+      "contributors": [
+        "yassinegab",
+        "souha-mabrouk",
+        "sayarinessrine",
+        "DhiaMejdi"
+      ],
+      "stars": 0,
+      "url": "https://github.com/yassinegab/Esprit-PIDEV-3AI6-2026-SosiConnectS",
       "created_at": "2026-02-05T20:59:09Z"
     },
     {
@@ -4317,8 +4341,8 @@
       "name": "Esprit-PIDS-4DS4-2026-QOS_Buddy",
       "owner": "AzizX25",
       "contributors": [
-        "AzizX25",
-        "Amani-hassani"
+        "Amani-hassani",
+        "AzizX25"
       ],
       "stars": 2,
       "url": "https://github.com/AzizX25/Esprit-PIDS-4DS4-2026-QOS_Buddy",
@@ -5036,14 +5060,14 @@
     },
     {
       "name": "esprit-PIDEV-3A16-2526-FARMIA",
-      "owner": "dinalad042-bot",
+      "owner": "tinkeringwithtoys",
       "contributors": [
-        "dinalad042-bot",
+        "tinkeringwithtoys",
         "AymenBenSalem250",
         "Emenslimi"
       ],
       "stars": 0,
-      "url": "https://github.com/dinalad042-bot/esprit-PIDEV-3A16-2526-FARMIA",
+      "url": "https://github.com/tinkeringwithtoys/esprit-PIDEV-3A16-2526-FARMIA",
       "created_at": "2026-04-02T09:05:29Z"
     },
     {
@@ -5064,8 +5088,8 @@
       "name": "esprit-pi-stats",
       "owner": "TheLime1",
       "contributors": [
-        "ayarii",
         "github-actions[bot]",
+        "ayarii",
         "TheLime1",
         "Copilot"
       ],
