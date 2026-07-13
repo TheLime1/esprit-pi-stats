@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-06T09:58:57.899962Z",
-  "total": 433,
+  "generated_at": "2026-07-13T08:51:28.118753Z",
+  "total": 434,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -139,7 +139,6 @@
         "Shirazbouslimi",
         "Hedi-Trabelsi",
         "Eyatrabellesi",
-        "mohamedadembrinsi",
         "zeineb-mrabet"
       ],
       "stars": 1,
@@ -316,7 +315,6 @@
         "Hedi-Trabelsi",
         "Shirazbouslimi",
         "Eyatrabellesi",
-        "mohamedadembrinsi",
         "MedFirass",
         "Zeinebmrabet1"
       ],
@@ -1599,17 +1597,13 @@
     },
     {
       "name": "Esprit-PIDEV-3A13-2526-CampusLink",
-      "owner": "mohamedMoujib",
+      "owner": "SalimBYS",
       "contributors": [
-        "aliazaiez",
-        "malekouni",
-        "mohamedMoujib",
-        "SalimBYS",
-        "Mohamed-Ali-Abidi"
+        "SalimBYS"
       ],
       "stars": 0,
-      "url": "https://github.com/mohamedMoujib/Esprit-PIDEV-3A13-2526-CampusLink",
-      "created_at": "2026-03-31T23:08:49Z"
+      "url": "https://github.com/SalimBYS/Esprit-PIDEV-3A13-2526-CampusLink",
+      "created_at": "2026-07-06T11:49:13Z"
     },
     {
       "name": "Esprit-PIDEV-3A14-2025-2026-AgriFlow",
@@ -1681,6 +1675,26 @@
       "created_at": "2026-02-13T15:24:00Z"
     },
     {
+      "name": "Esprit-PIDEV-3A16-Cofounded-java",
+      "owner": "Taha-Khouildi",
+      "contributors": [
+        "Taha-Khouildi"
+      ],
+      "stars": 0,
+      "url": "https://github.com/Taha-Khouildi/Esprit-PIDEV-3A16-Cofounded-java",
+      "created_at": "2026-07-11T11:55:13Z"
+    },
+    {
+      "name": "Esprit-PIDEV-3A16-Cofounded-web",
+      "owner": "Taha-Khouildi",
+      "contributors": [
+        "Taha-Khouildi"
+      ],
+      "stars": 0,
+      "url": "https://github.com/Taha-Khouildi/Esprit-PIDEV-3A16-Cofounded-web",
+      "created_at": "2026-07-11T17:19:17Z"
+    },
+    {
       "name": "Esprit-PIDEV-3A17--2026-VOS-web",
       "owner": "Azer-khadhraoui",
       "contributors": [
@@ -1726,15 +1740,15 @@
     },
     {
       "name": "Esprit-PIDEV-3A18-2026-Loopi",
-      "owner": "AiiForsa",
+      "owner": "OuissaleHamhoum",
       "contributors": [
         "OuissaleHamhoum",
         "yassine-majdoub",
         "werfellimahdi"
       ],
       "stars": 0,
-      "url": "https://github.com/AiiForsa/Esprit-PIDEV-3A18-2026-Loopi",
-      "created_at": "2026-04-08T12:41:47Z"
+      "url": "https://github.com/OuissaleHamhoum/Esprit-PIDEV-3A18-2026-Loopi",
+      "created_at": "2026-02-04T21:51:04Z"
     },
     {
       "name": "Esprit-PIDEV-3A18-2026-UniEarn",
@@ -3128,7 +3142,7 @@
       "owner": "tastoussaaa",
       "contributors": [
         "khatybon",
-        "chichapomme123",
+        "BouazizAicha",
         "karimgaza",
         "tastoussaaa",
         "Rami-Aggoun"
@@ -5081,6 +5095,7 @@
       "contributors": [
         "founounDhhibi",
         "AZIZTOMBARI",
+        "monikyvitorial-lang",
         "Ahmedf40"
       ],
       "stars": 1,
@@ -5107,17 +5122,6 @@
       "stars": 0,
       "url": "https://github.com/ADEMbenkahla/esprit-pifsjs-4twin3-2026-fortcode",
       "created_at": "2026-02-01T08:45:00Z"
-    },
-    {
-      "name": "esprit-piweb-3a31-2526-project6Gs",
-      "owner": "safwen511",
-      "contributors": [
-        "hamzaoui45",
-        "safwen511"
-      ],
-      "stars": 0,
-      "url": "https://github.com/safwen511/esprit-piweb-3a31-2526-project6Gs",
-      "created_at": "2026-03-30T13:14:18Z"
     }
   ]
 }
