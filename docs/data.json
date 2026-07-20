@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-13T08:51:28.118753Z",
-  "total": 434,
+  "generated_at": "2026-07-20T08:42:52.932136Z",
+  "total": 433,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -676,7 +676,8 @@
       "owner": "INESCHTI",
       "contributors": [
         "INESCHTI",
-        "aminemanai2003"
+        "aminemanai2003",
+        "Malekchairat"
       ],
       "stars": 0,
       "url": "https://github.com/INESCHTI/Esprit-PI-4DS11-2526-MajorCurrencies",
@@ -946,6 +947,7 @@
       "owner": "fadi-saidi",
       "contributors": [
         "Feryel-Lassili",
+        "fadisaidi02-dotcom",
         "montasar2",
         "seddik123ss",
         "manaiyossra",
@@ -2163,13 +2165,18 @@
     },
     {
       "name": "Esprit-PIDEV-3A27-2026-TravelSphere",
-      "owner": "TasnimDR",
+      "owner": "Sirine-Chebbi",
       "contributors": [
+        "Sirine-Chebbi",
+        "lkouuss",
+        "MariemTaouai",
+        "Amirkhemissi2003",
+        "MezenYounes",
         "TasnimDR"
       ],
-      "stars": 1,
-      "url": "https://github.com/TasnimDR/Esprit-PIDEV-3A27-2026-TravelSphere",
-      "created_at": "2026-03-06T23:31:18Z"
+      "stars": 0,
+      "url": "https://github.com/Sirine-Chebbi/Esprit-PIDEV-3A27-2026-TravelSphere",
+      "created_at": "2026-02-09T22:14:52Z"
     },
     {
       "name": "Esprit-PIDEV-3A27-2526-FinDinari",
@@ -2394,19 +2401,19 @@
     },
     {
       "name": "Esprit-PIDEV-3A33-2025-2026-wellora",
-      "owner": "Mohamedzeidi",
+      "owner": "chahd-maaloul",
       "contributors": [
-        "A-RG9",
         "Mohamedzeidi",
-        "KhalilSedghiani03",
-        "mariemfkh",
-        "0007007",
         "chahd-maaloul",
+        "A-RG9",
+        "mariemfkh",
+        "KhalilSedghiani03",
+        "0007007",
         "mohamedTaher73"
       ],
       "stars": 0,
-      "url": "https://github.com/Mohamedzeidi/Esprit-PIDEV-3A33-2025-2026-wellora",
-      "created_at": "2026-04-01T22:57:14Z"
+      "url": "https://github.com/chahd-maaloul/Esprit-PIDEV-3A33-2025-2026-wellora",
+      "created_at": "2026-02-03T14:11:33Z"
     },
     {
       "name": "Esprit-PIDEV-3A33-2026-EspritFlow",
@@ -3546,7 +3553,7 @@
         "mohamed15032003",
         "EMNABH1"
       ],
-      "stars": 2,
+      "stars": 3,
       "url": "https://github.com/ForsaPidev/Esprit-PIDEV-4INFINI1-2026-Forsa",
       "created_at": "2026-02-02T20:59:59Z"
     },
@@ -3729,7 +3736,7 @@
       "contributors": [
         "MAR14HL"
       ],
-      "stars": 1,
+      "stars": 2,
       "url": "https://github.com/MAR14HL/Esprit-PIDEV-4SAE5-2026-LinguaNova",
       "created_at": "2026-03-05T05:09:24Z"
     },
@@ -4086,13 +4093,15 @@
     },
     {
       "name": "Esprit-PIDEV_SE-4SE1-2526-MediCareAIFront",
-      "owner": "Aya-Hajji",
+      "owner": "Brahem-Ahmed",
       "contributors": [
-        "Aya-Hajji"
+        "Brahem-Ahmed",
+        "builderio-bot",
+        "NeyrouzTM"
       ],
       "stars": 0,
-      "url": "https://github.com/Aya-Hajji/Esprit-PIDEV_SE-4SE1-2526-MediCareAIFront",
-      "created_at": "2026-05-03T18:53:19Z"
+      "url": "https://github.com/Brahem-Ahmed/Esprit-PIDEV_SE-4SE1-2526-MediCareAIFront",
+      "created_at": "2026-02-17T04:40:04Z"
     },
     {
       "name": "Esprit-PIDEV_SE-4SE1-2526-ShowMatchGoOn",
@@ -4562,19 +4571,6 @@
       "stars": 0,
       "url": "https://github.com/souibgui00/Esprit-PIFullstackJS-4TWIN4-2026-IntelligentEmployeeRecommendationSystem",
       "created_at": "2026-02-19T20:55:40Z"
-    },
-    {
-      "name": "Esprit-PIFullstackJS-4TWIN5-2026-LockinBackend",
-      "owner": "SlimBizid",
-      "contributors": [
-        "SlimBizid",
-        "RamOfFate",
-        "drumino",
-        "zeeyach"
-      ],
-      "stars": 1,
-      "url": "https://github.com/SlimBizid/Esprit-PIFullstackJS-4TWIN5-2026-LockinBackend",
-      "created_at": "2026-01-30T19:15:20Z"
     },
     {
       "name": "Esprit-PIFullstackJS-4TWIN5-2026-LockinMLPlagiarism",
