@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T08:42:52.932136Z",
+  "generated_at": "2026-07-27T09:34:08.445492Z",
   "total": 433,
   "repositories": [
     {
@@ -708,6 +708,19 @@
       "created_at": "2026-01-20T14:59:24Z"
     },
     {
+      "name": "Esprit-PI-4DS9-2526-ARDHI",
+      "owner": "People-Of-The-Soil",
+      "contributors": [
+        "chamseddinedoulaEsprit",
+        "NajdRahmani",
+        "AdemMarghli",
+        "chaimabnfarhat"
+      ],
+      "stars": 0,
+      "url": "https://github.com/People-Of-The-Soil/Esprit-PI-4DS9-2526-ARDHI",
+      "created_at": "2026-03-03T10:21:06Z"
+    },
+    {
       "name": "Esprit-PI-4DS9-2526-ATHENAPLULSE",
       "owner": "Tasnim85",
       "contributors": [
@@ -988,17 +1001,13 @@
     },
     {
       "name": "Esprit-PI-4TWIN7-25-26--ByteBattle",
-      "owner": "Mahdi1-1",
+      "owner": "sabri-trabelsi",
       "contributors": [
-        "figma[bot]",
-        "Mahdi1-1",
-        "KhalilFRAJ",
-        "mahdimasmoudi1",
         "sabri-trabelsi"
       ],
       "stars": 0,
-      "url": "https://github.com/Mahdi1-1/Esprit-PI-4TWIN7-25-26--ByteBattle",
-      "created_at": "2026-01-28T10:30:25Z"
+      "url": "https://github.com/sabri-trabelsi/Esprit-PI-4TWIN7-25-26--ByteBattle",
+      "created_at": "2026-05-04T11:25:44Z"
     },
     {
       "name": "Esprit-PI-4Twin1-2026-ByteBattle",
@@ -3509,14 +3518,6 @@
       "stars": 0,
       "url": "https://github.com/oumaimaghediri/Esprit-PIDEV-4BI4--2026-Youth-Leadership-Outdoor-Education",
       "created_at": "2026-02-26T13:59:10Z"
-    },
-    {
-      "name": "Esprit-PIDEV-4DS3-2026-NetCare",
-      "owner": "oueslati-cmd",
-      "contributors": [],
-      "stars": 0,
-      "url": "https://github.com/oueslati-cmd/Esprit-PIDEV-4DS3-2026-NetCare",
-      "created_at": "2026-05-05T10:27:11Z"
     },
     {
       "name": "Esprit-PIDEV-4DS3-2026-STRATELLA",
