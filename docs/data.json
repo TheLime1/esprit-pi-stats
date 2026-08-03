@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-27T09:34:08.445492Z",
-  "total": 433,
+  "generated_at": "2026-08-03T09:24:38.375205Z",
+  "total": 432,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -908,13 +908,14 @@
     },
     {
       "name": "Esprit-PI-4SAE6-25-26-PathMyWay",
-      "owner": "EmnaKh1-Git",
+      "owner": "manelhomri2",
       "contributors": [
-        "EmnaKh1-Git"
+        "manelhomri2",
+        "BenGamraOussama"
       ],
       "stars": 0,
-      "url": "https://github.com/EmnaKh1-Git/Esprit-PI-4SAE6-25-26-PathMyWay",
-      "created_at": "2026-06-08T11:14:48Z"
+      "url": "https://github.com/manelhomri2/Esprit-PI-4SAE6-25-26-PathMyWay",
+      "created_at": "2026-01-23T16:05:56Z"
     },
     {
       "name": "Esprit-PI-4SE1-2025-2026-Campconnect",
@@ -1001,13 +1002,17 @@
     },
     {
       "name": "Esprit-PI-4TWIN7-25-26--ByteBattle",
-      "owner": "sabri-trabelsi",
+      "owner": "Mahdi1-1",
       "contributors": [
+        "figma[bot]",
+        "Mahdi1-1",
+        "KhalilFRAJ",
+        "mahdimasmoudi1",
         "sabri-trabelsi"
       ],
       "stars": 0,
-      "url": "https://github.com/sabri-trabelsi/Esprit-PI-4TWIN7-25-26--ByteBattle",
-      "created_at": "2026-05-04T11:25:44Z"
+      "url": "https://github.com/Mahdi1-1/Esprit-PI-4TWIN7-25-26--ByteBattle",
+      "created_at": "2026-01-28T10:30:25Z"
     },
     {
       "name": "Esprit-PI-4Twin1-2026-ByteBattle",
@@ -1312,16 +1317,6 @@
       "stars": 0,
       "url": "https://github.com/bellaaghaaziz/Esprit-PIDATA-4DATA-2025-2026-Nexo",
       "created_at": "2026-04-09T11:56:13Z"
-    },
-    {
-      "name": "Esprit-PIDE6-TRAFIQ",
-      "owner": "mohamedkhalil26",
-      "contributors": [
-        "mohamedkhalil26"
-      ],
-      "stars": 0,
-      "url": "https://github.com/mohamedkhalil26/Esprit-PIDE6-TRAFIQ",
-      "created_at": "2026-03-03T21:31:12Z"
     },
     {
       "name": "Esprit-PIDEV-2025-4INFINI3-Helma",
@@ -1982,7 +1977,7 @@
       "name": "Esprit-PIDEV-3A23-2526-GoVibe-Symfony-",
       "owner": "mohamedbenaoune25-crypto",
       "contributors": [
-        "mohamedbenaoune25-crypto",
+        "mohamedbenaoune25-netizen",
         "Azizmch"
       ],
       "stars": 0,
@@ -2174,18 +2169,13 @@
     },
     {
       "name": "Esprit-PIDEV-3A27-2026-TravelSphere",
-      "owner": "Sirine-Chebbi",
+      "owner": "TasnimDR",
       "contributors": [
-        "Sirine-Chebbi",
-        "lkouuss",
-        "MariemTaouai",
-        "Amirkhemissi2003",
-        "MezenYounes",
         "TasnimDR"
       ],
-      "stars": 0,
-      "url": "https://github.com/Sirine-Chebbi/Esprit-PIDEV-3A27-2026-TravelSphere",
-      "created_at": "2026-02-09T22:14:52Z"
+      "stars": 1,
+      "url": "https://github.com/TasnimDR/Esprit-PIDEV-3A27-2026-TravelSphere",
+      "created_at": "2026-03-06T23:31:18Z"
     },
     {
       "name": "Esprit-PIDEV-3A27-2526-FinDinari",
@@ -4051,7 +4041,6 @@
       "name": "Esprit-PIDEV-Web-3A3-EcoAdventure",
       "owner": "CMhedi",
       "contributors": [
-        "CMhedi",
         "Sabrii3"
       ],
       "stars": 0,
