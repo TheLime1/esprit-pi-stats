@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-17T06:36:21.383283Z",
-  "total": 431,
+  "generated_at": "2026-08-24T06:38:51.002096Z",
+  "total": 430,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -999,20 +999,6 @@
       "stars": 1,
       "url": "https://github.com/fadi-saidi/Esprit-PI-4SE3-2026-StreetLeague-Backend",
       "created_at": "2026-02-17T13:33:14Z"
-    },
-    {
-      "name": "Esprit-PI-4TWIN5-2526-BusinessSaaS",
-      "owner": "business-saas-platform",
-      "contributors": [
-        "azizrahouej",
-        "jemi3i",
-        "mariem1-cell",
-        "Yomna-Gharssellaoui",
-        "chtrihab"
-      ],
-      "stars": 1,
-      "url": "https://github.com/business-saas-platform/Esprit-PI-4TWIN5-2526-BusinessSaaS",
-      "created_at": "2026-01-27T19:46:15Z"
     },
     {
       "name": "Esprit-PI-4TWIN6-2026-IntelligentRecommendationSystem",
@@ -4104,15 +4090,11 @@
     },
     {
       "name": "Esprit-PIDEV_SE-4SE1-2526-ShowMatchGoOn",
-      "owner": "11434151s",
-      "contributors": [
-        "11434151s",
-        "WafaRezgui",
-        "thlibiranim"
-      ],
+      "owner": "Medazizzz",
+      "contributors": [],
       "stars": 0,
-      "url": "https://github.com/11434151s/Esprit-PIDEV_SE-4SE1-2526-ShowMatchGoOn",
-      "created_at": "2026-02-26T21:54:47Z"
+      "url": "https://github.com/Medazizzz/Esprit-PIDEV_SE-4SE1-2526-ShowMatchGoOn",
+      "created_at": "2026-04-10T18:51:12Z"
     },
     {
       "name": "Esprit-PIDEV_SE-4SE2-2526-Espritmarket",
