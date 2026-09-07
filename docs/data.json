@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T12:12:17.665828Z",
+  "generated_at": "2026-09-07T11:04:49.863974Z",
   "total": 430,
   "repositories": [
     {
@@ -735,6 +735,21 @@
       "stars": 2,
       "url": "https://github.com/mariemmanai/Esprit-PI-4DS6-2526-FXPERT",
       "created_at": "2026-01-20T14:59:24Z"
+    },
+    {
+      "name": "Esprit-PI-4DS6-2526-VITA",
+      "owner": "mohamedmalekkraiem",
+      "contributors": [
+        "RayenKhlifi03",
+        "Yosri-Jemai",
+        "chaimanaanaa",
+        "Rima-Ben-Haj-Ali",
+        "mohamedmalekkraiem",
+        "si-war"
+      ],
+      "stars": 0,
+      "url": "https://github.com/mohamedmalekkraiem/Esprit-PI-4DS6-2526-VITA",
+      "created_at": "2026-09-03T18:58:11Z"
     },
     {
       "name": "Esprit-PI-4DS9-2526-ARDHI",
@@ -2737,21 +2752,6 @@
       "stars": 0,
       "url": "https://github.com/moez-og/Esprit-PIDEV-3A4-2026-EventManager",
       "created_at": "2026-02-16T18:01:00Z"
-    },
-    {
-      "name": "Esprit-PIDEV-3A41-2026-SANTEA",
-      "owner": "HoussemLangar",
-      "contributors": [
-        "HoussemLangar",
-        "minach19",
-        "shinnear",
-        "Sabbagh-Yassine",
-        "LORD-MOTAZ",
-        "ShwensiV2"
-      ],
-      "stars": 1,
-      "url": "https://github.com/HoussemLangar/Esprit-PIDEV-3A41-2026-SANTEA",
-      "created_at": "2026-01-24T16:46:05Z"
     },
     {
       "name": "Esprit-PIDEV-3A41-2526-CODEQUEST",
