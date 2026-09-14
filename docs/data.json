@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T11:04:49.863974Z",
+  "generated_at": "2026-09-14T11:17:09.510781Z",
   "total": 430,
   "repositories": [
     {
@@ -151,6 +151,7 @@
         "Shirazbouslimi",
         "Hedi-Trabelsi",
         "Eyatrabellesi",
+        "mohamedadembrinsi0",
         "zeineb-mrabet"
       ],
       "stars": 1,
@@ -343,6 +344,7 @@
         "Hedi-Trabelsi",
         "Shirazbouslimi",
         "Eyatrabellesi",
+        "mohamedadembrinsi0",
         "MedFirass",
         "Zeinebmrabet1"
       ],
@@ -3850,6 +3852,17 @@
       "created_at": "2026-06-07T14:30:47Z"
     },
     {
+      "name": "Esprit-PIDEV-4SE3-2026-CampConnect",
+      "owner": "Li-Sein-ESP",
+      "contributors": [
+        "Li-Sein-ESP",
+        "Nawres30"
+      ],
+      "stars": 1,
+      "url": "https://github.com/Li-Sein-ESP/Esprit-PIDEV-4SE3-2026-CampConnect",
+      "created_at": "2026-02-18T14:45:37Z"
+    },
+    {
       "name": "Esprit-PIDEV-4TWIN1-2026-Artisant",
       "owner": "ImemAyachi",
       "contributors": [
@@ -4727,22 +4740,6 @@
       "stars": 0,
       "url": "https://github.com/Jasser-sagar/Esprit-PIJAVA-3B3-2526-FARMMANAGER",
       "created_at": "2026-04-22T18:27:03Z"
-    },
-    {
-      "name": "Esprit-PISAE-4SAE7-2526-JungleInEnglish",
-      "owner": "BouthaynaHammami",
-      "contributors": [
-        "BouthaynaHammami",
-        "shaymaesprit",
-        "sichelba",
-        "hyba24",
-        "chaibimarwa",
-        "saifelislem",
-        "raissiislem"
-      ],
-      "stars": 0,
-      "url": "https://github.com/BouthaynaHammami/Esprit-PISAE-4SAE7-2526-JungleInEnglish",
-      "created_at": "2026-06-08T00:58:33Z"
     },
     {
       "name": "Esprit-PISYMFONY-3A2-2526-AgriNova",
