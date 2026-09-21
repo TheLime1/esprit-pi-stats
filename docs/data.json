@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-14T11:17:09.510781Z",
-  "total": 430,
+  "generated_at": "2026-09-21T11:30:13.449456Z",
+  "total": 432,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -295,7 +295,7 @@
         "skander101",
         "iramtrabelsi3",
         "Youssefsellami1",
-        "bouzid20"
+        "boznozz"
       ],
       "stars": 0,
       "url": "https://github.com/skander101/ESPRIT-PIDEV-WEB-3A27-2026-Bizhub",
@@ -1126,6 +1126,19 @@
       "created_at": "2026-01-23T14:07:17Z"
     },
     {
+      "name": "Esprit-PI-5TWIN1-2026-Nutritrace",
+      "owner": "Ilyeschrif22",
+      "contributors": [
+        "Ilyeschrif22",
+        "Sana00lar",
+        "Abderrahmen2002",
+        "saladinhere"
+      ],
+      "stars": 0,
+      "url": "https://github.com/Ilyeschrif22/Esprit-PI-5TWIN1-2026-Nutritrace",
+      "created_at": "2026-09-16T20:11:38Z"
+    },
+    {
       "name": "Esprit-PI-AI-3IA3-2526-BridgingBipolar",
       "owner": "khalilMessaoud1",
       "contributors": [
@@ -1537,7 +1550,7 @@
       "owner": "fedi-afk",
       "contributors": [
         "dhia632",
-        "BaraaMensi",
+        "BaraaMabrouk",
         "fedi-afk"
       ],
       "stars": 0,
@@ -4575,6 +4588,19 @@
       "stars": 0,
       "url": "https://github.com/souibgui00/Esprit-PIFullstackJS-4TWIN4-2026-IntelligentEmployeeRecommendationSystem",
       "created_at": "2026-02-19T20:55:40Z"
+    },
+    {
+      "name": "Esprit-PIFullstackJS-4TWIN5-2026-HRBrain",
+      "owner": "Taieb-belhadjali",
+      "contributors": [
+        "mouadhhamzaoui",
+        "hibachaabani",
+        "Taieb-belhadjali",
+        "ahmedmhadbi"
+      ],
+      "stars": 0,
+      "url": "https://github.com/Taieb-belhadjali/Esprit-PIFullstackJS-4TWIN5-2026-HRBrain",
+      "created_at": "2026-01-27T18:26:16Z"
     },
     {
       "name": "Esprit-PIFullstackJS-4TWIN5-2026-LockinMLPlagiarism",
