@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-21T11:30:13.449456Z",
-  "total": 432,
+  "generated_at": "2026-09-28T12:25:01.420740Z",
+  "total": 434,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -180,13 +180,14 @@
     },
     {
       "name": "ESPRIT-PIDEV-4SAE11-2026-SkillUp",
-      "owner": "Jawher-Bziouech",
+      "owner": "Jaouhar-Bziouech",
       "contributors": [
         "maahdichebbi",
+        "Jaouhar-Bziouech",
         "Therealcydex"
       ],
       "stars": 0,
-      "url": "https://github.com/Jawher-Bziouech/ESPRIT-PIDEV-4SAE11-2026-SkillUp",
+      "url": "https://github.com/Jaouhar-Bziouech/ESPRIT-PIDEV-4SAE11-2026-SkillUp",
       "created_at": "2026-02-06T09:15:54Z"
     },
     {
@@ -1132,7 +1133,8 @@
         "Ilyeschrif22",
         "Sana00lar",
         "Abderrahmen2002",
-        "saladinhere"
+        "saladinhere",
+        "usersaif123"
       ],
       "stars": 0,
       "url": "https://github.com/Ilyeschrif22/Esprit-PI-5TWIN1-2026-Nutritrace",
@@ -2116,7 +2118,7 @@
         "MayssemChouria",
         "Haifa-gaied",
         "AmiraMatteli",
-        "sarraaroua",
+        "sarraaroua-png",
         "haifagaied",
         "moncef-bensalem"
       ],
@@ -2603,7 +2605,7 @@
     },
     {
       "name": "Esprit-PIDEV-3A36-2526-MentorAi",
-      "owner": "Tlili-Eya",
+      "owner": "Med-arslen",
       "contributors": [
         "Med-arslen",
         "mariemamdouni",
@@ -2612,8 +2614,8 @@
         "amalMOK"
       ],
       "stars": 0,
-      "url": "https://github.com/Tlili-Eya/Esprit-PIDEV-3A36-2526-MentorAi",
-      "created_at": "2026-02-04T16:12:01Z"
+      "url": "https://github.com/Med-arslen/Esprit-PIDEV-3A36-2526-MentorAi",
+      "created_at": "2026-07-10T08:34:58Z"
     },
     {
       "name": "Esprit-PIDEV-3A37-2026-ArtTN",
@@ -4123,6 +4125,21 @@
       "created_at": "2026-04-10T18:51:12Z"
     },
     {
+      "name": "Esprit-PIDEV_SE-4SE1-2526-StreetLeague",
+      "owner": "safa-hmd",
+      "contributors": [
+        "iyedessid1",
+        "safa-hmd",
+        "Saraouertani",
+        "Malak-Messaoui",
+        "IngRania",
+        "houssem-dv"
+      ],
+      "stars": 0,
+      "url": "https://github.com/safa-hmd/Esprit-PIDEV_SE-4SE1-2526-StreetLeague",
+      "created_at": "2026-02-21T20:45:30Z"
+    },
+    {
       "name": "Esprit-PIDEV_SE-4SE2-2526-Espritmarket",
       "owner": "FarahZekri11",
       "contributors": [],
@@ -4390,17 +4407,16 @@
     },
     {
       "name": "Esprit-PIDS-4DS8-2026-AgriSmart",
-      "owner": "NourEsprit123",
+      "owner": "malaktaboubi",
       "contributors": [
-        "malaktaboubi",
         "omarJ10",
-        "NourEsprit123",
         "AmineMaalej091102",
-        "KTHIRI-Chedi"
+        "KTHIRI-Chedi",
+        "malaktaboubi"
       ],
       "stars": 0,
-      "url": "https://github.com/NourEsprit123/Esprit-PIDS-4DS8-2026-AgriSmart",
-      "created_at": "2026-06-08T21:05:51Z"
+      "url": "https://github.com/malaktaboubi/Esprit-PIDS-4DS8-2026-AgriSmart",
+      "created_at": "2026-05-03T21:26:32Z"
     },
     {
       "name": "Esprit-PIDS-DS6-2026-InsightQoS_AI",
@@ -4450,6 +4466,14 @@
       "stars": 1,
       "url": "https://github.com/smailch/Esprit-PIFullstackJS-4TWIN1-2026-SmartSite-",
       "created_at": "2026-02-06T18:56:04Z"
+    },
+    {
+      "name": "Esprit-PIFullstackJS-4TWIN2-2026-SkillRanker",
+      "owner": "dhiaromdhani",
+      "contributors": [],
+      "stars": 0,
+      "url": "https://github.com/dhiaromdhani/Esprit-PIFullstackJS-4TWIN2-2026-SkillRanker",
+      "created_at": "2026-09-24T13:30:25Z"
     },
     {
       "name": "Esprit-PIFullstackJS-4TWIN2-2026-bytebattle-Challenge_service",
