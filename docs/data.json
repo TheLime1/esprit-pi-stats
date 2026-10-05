@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T12:25:01.420740Z",
+  "generated_at": "2026-10-05T13:05:22.621452Z",
   "total": 434,
   "repositories": [
     {
@@ -1026,7 +1026,6 @@
         "abir-mosrati2",
         "harouunn",
         "haideradolfo",
-        "abir-mosrati",
         "azizsouei"
       ],
       "stars": 0,
@@ -1131,10 +1130,11 @@
       "owner": "Ilyeschrif22",
       "contributors": [
         "Ilyeschrif22",
-        "Sana00lar",
         "Abderrahmen2002",
-        "saladinhere",
-        "usersaif123"
+        "usersaif123",
+        "saladin-scs",
+        "Sana00lar",
+        "saladinhere"
       ],
       "stars": 0,
       "url": "https://github.com/Ilyeschrif22/Esprit-PI-5TWIN1-2026-Nutritrace",
@@ -1650,13 +1650,17 @@
     },
     {
       "name": "Esprit-PIDEV-3A13-2526-CampusLink",
-      "owner": "SalimBYS",
+      "owner": "mohamedMoujib",
       "contributors": [
-        "SalimBYS"
+        "aliazaiez",
+        "malekouni",
+        "mohamedMoujib",
+        "SalimBYS",
+        "Mohamed-Ali-Abidi"
       ],
       "stars": 0,
-      "url": "https://github.com/SalimBYS/Esprit-PIDEV-3A13-2526-CampusLink",
-      "created_at": "2026-07-06T11:49:13Z"
+      "url": "https://github.com/mohamedMoujib/Esprit-PIDEV-3A13-2526-CampusLink",
+      "created_at": "2026-03-31T23:08:49Z"
     },
     {
       "name": "Esprit-PIDEV-3A14-2025-2026-AgriFlow",
@@ -1947,9 +1951,9 @@
         "22mdw-rahmakaddachi",
         "israa-aouainia",
         "rayenmarouani",
+        "Anoire404",
         "amiryazidi",
-        "sarabenejma",
-        "Anoire404"
+        "sarabenejma"
       ],
       "stars": 0,
       "url": "https://github.com/22mdw-rahmakaddachi/Esprit-PIDEV-3A20-2526-Nexora",
@@ -2216,13 +2220,18 @@
     },
     {
       "name": "Esprit-PIDEV-3A27-2026-TravelSphere",
-      "owner": "TasnimDR",
+      "owner": "Sirine-Chebbi",
       "contributors": [
+        "Sirine-Chebbi",
+        "lkouuss",
+        "MariemTaouai",
+        "Amirkhemissi2003",
+        "MezenYounes",
         "TasnimDR"
       ],
-      "stars": 1,
-      "url": "https://github.com/TasnimDR/Esprit-PIDEV-3A27-2026-TravelSphere",
-      "created_at": "2026-03-06T23:31:18Z"
+      "stars": 0,
+      "url": "https://github.com/Sirine-Chebbi/Esprit-PIDEV-3A27-2026-TravelSphere",
+      "created_at": "2026-02-09T22:14:52Z"
     },
     {
       "name": "Esprit-PIDEV-3A27-2526-FinDinari",
@@ -3936,8 +3945,8 @@
       "contributors": [
         "ChedlyRebai",
         "mahmoud1234-cmd",
-        "DoniaMaazoun",
         "AsmamMh",
+        "DoniaMaazoun",
         "ghadabannourii"
       ],
       "stars": 0,
