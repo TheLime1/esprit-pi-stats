@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T13:56:40.249965Z",
+  "generated_at": "2026-10-19T11:37:10.825528Z",
   "total": 433,
   "repositories": [
     {
@@ -507,7 +507,7 @@
         "EmnaBani4",
         "Nourcherni342"
       ],
-      "stars": 1,
+      "stars": 2,
       "url": "https://github.com/nourcherni399/Esprit-PI-3A44-2026-AUTICARE",
       "created_at": "2026-02-04T16:02:41Z"
     },
@@ -1635,13 +1635,17 @@
     },
     {
       "name": "Esprit-PIDEV-3A13-2526-CampusLink",
-      "owner": "SalimBYS",
+      "owner": "mohamedMoujib",
       "contributors": [
-        "SalimBYS"
+        "aliazaiez",
+        "malekouni",
+        "mohamedMoujib",
+        "SalimBYS",
+        "Mohamed-Ali-Abidi"
       ],
       "stars": 0,
-      "url": "https://github.com/SalimBYS/Esprit-PIDEV-3A13-2526-CampusLink",
-      "created_at": "2026-07-06T11:49:13Z"
+      "url": "https://github.com/mohamedMoujib/Esprit-PIDEV-3A13-2526-CampusLink",
+      "created_at": "2026-03-31T23:08:49Z"
     },
     {
       "name": "Esprit-PIDEV-3A14-2025-2026-AgriFlow",
@@ -4636,11 +4640,10 @@
       "name": "Esprit-PIFullstackJS-4TWIN8-2025-2026-MEDIFOLLOW",
       "owner": "takoua-eng",
       "contributors": [
-        "takoua-eng",
         "Nada-Ben-Khaled",
         "yasmine123ab",
-        "ranimboumessouer",
-        "OnsChehab"
+        "OnsChehab",
+        "ranimboumessouer"
       ],
       "stars": 0,
       "url": "https://github.com/takoua-eng/Esprit-PIFullstackJS-4TWIN8-2025-2026-MEDIFOLLOW",
