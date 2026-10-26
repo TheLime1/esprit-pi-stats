@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-19T11:37:10.825528Z",
-  "total": 433,
+  "generated_at": "2026-10-26T11:54:58.603207Z",
+  "total": 434,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -395,16 +395,16 @@
     },
     {
       "name": "Esprit-PI-2A29-2526-AlimentationDurable",
-      "owner": "sinda15960",
+      "owner": "sinda-lazaar",
       "contributors": [
-        "sinda15960",
+        "sinda-lazaar",
         "azlouknada",
         "hajerbentemessek792-tech",
         "sarraA43",
         "cyrnesboui1"
       ],
       "stars": 0,
-      "url": "https://github.com/sinda15960/Esprit-PI-2A29-2526-AlimentationDurable",
+      "url": "https://github.com/sinda-lazaar/Esprit-PI-2A29-2526-AlimentationDurable",
       "created_at": "2026-03-28T12:46:01Z"
     },
     {
@@ -1635,17 +1635,13 @@
     },
     {
       "name": "Esprit-PIDEV-3A13-2526-CampusLink",
-      "owner": "mohamedMoujib",
+      "owner": "SalimBYS",
       "contributors": [
-        "aliazaiez",
-        "malekouni",
-        "mohamedMoujib",
-        "SalimBYS",
-        "Mohamed-Ali-Abidi"
+        "SalimBYS"
       ],
       "stars": 0,
-      "url": "https://github.com/mohamedMoujib/Esprit-PIDEV-3A13-2526-CampusLink",
-      "created_at": "2026-03-31T23:08:49Z"
+      "url": "https://github.com/SalimBYS/Esprit-PIDEV-3A13-2526-CampusLink",
+      "created_at": "2026-07-06T11:49:13Z"
     },
     {
       "name": "Esprit-PIDEV-3A14-2025-2026-AgriFlow",
@@ -2968,7 +2964,7 @@
       "name": "Esprit-PIDEV-3A46-2526-sport_insight",
       "owner": "syrinesaiidaoui",
       "contributors": [
-        "elyesexe",
+        "elyes-exe",
         "tesnime407",
         "ryyymmml",
         "AmineBouchnatEsprit",
@@ -3629,6 +3625,16 @@
       "stars": 0,
       "url": "https://github.com/azizbenmo/Esprit-PIDEV-4SAE10-2026-PediaNephro",
       "created_at": "2026-04-27T18:09:50Z"
+    },
+    {
+      "name": "Esprit-PIDEV-4SAE2--2026-Freelancify",
+      "owner": "BrahimGarram",
+      "contributors": [
+        "BrahimGarram"
+      ],
+      "stars": 0,
+      "url": "https://github.com/BrahimGarram/Esprit-PIDEV-4SAE2--2026-Freelancify",
+      "created_at": "2026-02-11T12:57:29Z"
     },
     {
       "name": "Esprit-PIDEV-4SAE3-2026-Memoria",
@@ -5055,16 +5061,16 @@
     },
     {
       "name": "esprit-PIDEV-JAVA-Sport-Insight-3A46",
-      "owner": "elyesexe",
+      "owner": "elyes-exe",
       "contributors": [
-        "elyesexe",
+        "elyes-exe",
         "AmineBouchnatEsprit",
         "syrinesaidaoui",
         "ryyymmml",
         "tesnime407"
       ],
       "stars": 0,
-      "url": "https://github.com/elyesexe/esprit-PIDEV-JAVA-Sport-Insight-3A46",
+      "url": "https://github.com/elyes-exe/esprit-PIDEV-JAVA-Sport-Insight-3A46",
       "created_at": "2026-04-02T09:16:48Z"
     },
     {
