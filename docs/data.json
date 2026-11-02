@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-26T11:54:58.603207Z",
-  "total": 434,
+  "generated_at": "2026-11-02T14:16:54.020179Z",
+  "total": 435,
   "repositories": [
     {
       "name": "ESPRIT-PI-3A14-2026-AgriFlow",
@@ -726,6 +726,21 @@
       "stars": 0,
       "url": "https://github.com/Hajer5503/Esprit-PI-4DS5-AgriSmart",
       "created_at": "2026-02-08T18:42:22Z"
+    },
+    {
+      "name": "Esprit-PI-4DS6-2526-3DVITA",
+      "owner": "chaimanaanaa",
+      "contributors": [
+        "RayenKhlifi03",
+        "Yosri-Jemai",
+        "chaimanaanaa",
+        "Rima-Ben-Haj-Ali",
+        "mohamedmalekkraiem",
+        "si-war"
+      ],
+      "stars": 0,
+      "url": "https://github.com/chaimanaanaa/Esprit-PI-4DS6-2526-3DVITA",
+      "created_at": "2026-10-29T16:01:49Z"
     },
     {
       "name": "Esprit-PI-4DS6-2526-FXPERT",
@@ -4101,15 +4116,13 @@
     },
     {
       "name": "Esprit-PIDEV_SE-4SE1-2526-MediCareAIFront",
-      "owner": "Brahem-Ahmed",
+      "owner": "Aya-Hajji",
       "contributors": [
-        "Brahem-Ahmed",
-        "builderio-bot",
-        "NeyrouzTM"
+        "Aya-Hajji"
       ],
       "stars": 0,
-      "url": "https://github.com/Brahem-Ahmed/Esprit-PIDEV_SE-4SE1-2526-MediCareAIFront",
-      "created_at": "2026-02-17T04:40:04Z"
+      "url": "https://github.com/Aya-Hajji/Esprit-PIDEV_SE-4SE1-2526-MediCareAIFront",
+      "created_at": "2026-05-03T18:53:19Z"
     },
     {
       "name": "Esprit-PIDEV_SE-4SE1-2526-ShowMatchGoOn",
