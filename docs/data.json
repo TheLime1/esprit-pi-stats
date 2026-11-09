@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T14:16:54.020179Z",
+  "generated_at": "2026-11-09T14:45:09.400213Z",
   "total": 435,
   "repositories": [
     {
@@ -251,6 +251,30 @@
       "stars": 0,
       "url": "https://github.com/YassineBenFraj/ESPRIT-PIDEV-4SAE8-2026-KIDNEYCARE",
       "created_at": "2026-02-10T21:32:32Z"
+    },
+    {
+      "name": "ESPRIT-PIDEV-CPP",
+      "owner": "0007007",
+      "contributors": [
+        "0007007"
+      ],
+      "stars": 0,
+      "url": "https://github.com/0007007/ESPRIT-PIDEV-CPP",
+      "created_at": "2026-11-07T20:18:32Z"
+    },
+    {
+      "name": "ESPRIT-PIDEV-JAVA",
+      "owner": "0007007",
+      "contributors": [
+        "A-RG9",
+        "mariemfkh",
+        "Mohamedzeidi",
+        "0007007",
+        "KhalilSedghiani03"
+      ],
+      "stars": 0,
+      "url": "https://github.com/0007007/ESPRIT-PIDEV-JAVA",
+      "created_at": "2026-11-03T13:11:46Z"
     },
     {
       "name": "ESPRIT-PIDEV-JAVA-3A27-2026-Bizhub",
@@ -4238,16 +4262,6 @@
       "created_at": "2026-02-13T19:15:32Z"
     },
     {
-      "name": "Esprit-PIDEV_SE-4SE3-2526-MedicareAI",
-      "owner": "ilef-bahrouni",
-      "contributors": [
-        "cherifa-Bahrouni"
-      ],
-      "stars": 0,
-      "url": "https://github.com/ilef-bahrouni/Esprit-PIDEV_SE-4SE3-2526-MedicareAI",
-      "created_at": "2026-02-15T22:47:15Z"
-    },
-    {
       "name": "Esprit-PIDEV_SE4SE1-2526-ShowMatchGoOn",
       "owner": "WafaRezgui",
       "contributors": [
@@ -4281,20 +4295,6 @@
       "stars": 3,
       "url": "https://github.com/zrharounesprit/Esprit-PIDS-4DS1-2026-QoSBuddy",
       "created_at": "2026-01-20T11:00:03Z"
-    },
-    {
-      "name": "Esprit-PIDS-4DS1-2026-agrio",
-      "owner": "hendch",
-      "contributors": [
-        "hendch",
-        "MbarkyLyna",
-        "khalil-mohamed221",
-        "Yassinebc99",
-        "Dyissi"
-      ],
-      "stars": 0,
-      "url": "https://github.com/hendch/Esprit-PIDS-4DS1-2026-agrio",
-      "created_at": "2026-01-21T16:00:33Z"
     },
     {
       "name": "Esprit-PIDS-4DS11-2026-Avatar",
@@ -4377,7 +4377,7 @@
         "Amani-hassani",
         "AzizX25"
       ],
-      "stars": 2,
+      "stars": 3,
       "url": "https://github.com/AzizX25/Esprit-PIDS-4DS4-2026-QOS_Buddy",
       "created_at": "2026-04-15T15:39:00Z"
     },
