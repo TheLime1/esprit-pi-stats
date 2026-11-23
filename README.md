@@ -1,109 +1,38 @@
-# Esprit-PI-Repositories-Tracker
+# ESPRIT PI Stats
 
-A website and A Python CLI tool to search and track ESPRIT projects.
+A searchable index of ESPRIT integrated-project repositories on GitHub. The dashboard reads a public snapshot. Visitors can search projects, owners and contributors, sort the directory, explore class and contributor rankings, or present five summary slides.
 
-## Features
+[Open the dashboard](https://thelime1.github.io/esprit-pi-stats/)
 
-- 🎨 Beautiful ASCII art display
-- 🔍 Multiple search modes (All, Class, Exact, Year)
-- 📊 Rich formatted table output
-- 🔄 Automatic pagination handling
-- 🎯 Local filtering with case-insensitive matching
-- 🚀 GitHub API integration with rate limit handling
+## Run the dashboard
 
-## Installation
+Use Node.js 24 (or 22.12+) and npm.
 
-```bash
-# Clone the repository
-git clone https://github.com/TheLime1/esprit-pi-stats.git
-cd esprit-pi-stats
-
-# Install the package
-pip install -e .
+```sh
+npm ci
+npm run dev
 ```
 
-## Usage
+Run `npm run build` to produce the static site in `dist/`. Run `npm run preview` to serve the production build locally.
 
-The CLI provides four search modes:
+The UI uses React and Vite, with locally adapted [Aceternity UI Bento Grid](https://ui.aceternity.com/components/bento-grid) and [grid background](https://ui.aceternity.com/components/grid-and-dot-backgrounds) components. Fonts and assets ship with the build. Search uses an in-memory index, the directory renders twelve rows per page, and the analytics and presentation modules load when opened.
 
-### 1. All Mode - Search all ESPRITPI repositories
+## Data collection
 
-```bash
+The collector searches public GitHub repositories created since 2025, filters by the ESPRIT project naming convention, and groups common frontend/backend variants under a single project entry. The snapshot records the representative repository's owner, creation date, stars and contributor logins. Class rankings use identifiable class codes in repository names.
+
+```sh
+python -m pip install -e .
 esprit-tracker all-repos
-```
-
-Searches for all repositories starting with `ESPRITPI` (case-insensitive).
-
-### 2. Class Mode - Search by class
-
-```bash
-esprit-tracker class-repos <Class>
-```
-
-Searches for repositories matching the pattern `ESPRITPI-<Class>`.
-
-**Example:**
-```bash
-esprit-tracker class-repos 3A
-# Finds: ESPRITPI-3A, ESPRITPI-3A-2024, ESPRITPI-3A-2025, etc.
-```
-
-
-### 3. Pi Mode - Search by PI
-
-```bash
-esprit-tracker pi-repos <PI>
-```
-
-Searches for repositories matching the pattern `ESPRITPI-<PI>`.
-
-**Example:**
-```bash
+esprit-tracker class-repos 3A14
 esprit-tracker pi-repos PIDEV
+esprit-tracker all-repos --json public/data.json
 ```
 
+Set `GITHUB_TOKEN` when collecting a full snapshot to use GitHub's authenticated API quota. The dashboard itself needs no token.
 
-## GitHub Token (Optional but Recommended)
+## Updates and deployment
 
-To avoid GitHub API rate limits, set a GitHub personal access token:
+The **Refresh repository snapshot** workflow collects data every other Monday at 06:00 UTC, anchored on 16 November 2026. GitHub starts a small weekly schedule check and only runs the collector when due. The workflow also supports a manual refresh on `main`.
 
-```bash
-export GITHUB_TOKEN=your_github_token_here
-```
-
-Without a token, you may encounter rate limiting (60 requests/hour). With a token, you get 5000 requests/hour.
-
-### Creating a GitHub Token
-
-1. Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
-2. Generate a new token with `public_repo` scope
-3. Copy the token and set it as an environment variable
-
-## Output
-
-The tool displays results in a beautiful table format:
-
-## Technical Details
-
-### Search Strategy
-
-The tool uses a two-phase approach:
-
-1. **Broad GitHub API Search**: Fetches all potential matches using GitHub's fuzzy search API
-2. **Local Filtering**: Applies precise `startswith` filtering on fetched results
-
-This ensures accurate results despite GitHub's fuzzy search behavior.
-
-### Pagination
-
-The tool automatically handles pagination, fetching up to 100 results per page until all matching repositories are retrieved.
-
-### Dependencies
-
-- `typer>=0.9.0` - CLI framework
-- `requests>=2.31.0` - HTTP requests
-- `rich>=13.0.0` - Terminal formatting and tables
-
-## License
-
-See [LICENSE](LICENSE) file for details.
+Select **GitHub Actions** in **Settings → Pages → Build and deployment → Source** when migrating from branch-based Pages. Pull requests build the site for validation. Changes to `main` and successful snapshot refreshes build and publish `dist/` to Pages.

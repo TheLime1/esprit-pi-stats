@@ -1,0 +1,117 @@
+.directory {
+  min-width: 0;
+  color: var(--ink);
+  --directory-mono: var(--mono, ui-monospace, SFMono-Regular, Consolas, monospace);
+}
+.directory-heading, .directory-tools, .directory-pagination, .directory-pagination > div {
+  display: flex;
+  align-items: center;
+}
+.directory-heading { flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; margin-bottom: 1.25rem; }
+.directory-heading h2 { margin: 0; font-size: clamp(1.65rem, 4vw, 2.3rem); line-height: 1.1; letter-spacing: -.05em; }
+.directory-result-count, .directory-pagination, .directory-owner, .directory-date, .directory-stars,
+.directory-people, .directory-table th, .directory-details strong { font-family: var(--directory-mono); }
+.directory-result-count, .directory-pagination { font-size: .76rem; color: var(--muted); }
+.directory-tools { gap: .65rem; margin-bottom: 1.2rem; }
+.directory-search, .directory-sort, .directory-page-picker {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  color: var(--muted);
+}
+.directory-search { flex: 1; gap: .65rem; padding: 0 .85rem; }
+.directory input, .directory select, .directory button { font: inherit; }
+.directory-search input { width: 100%; min-width: 0; height: 44px; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: .9rem; }
+.directory-search input::placeholder { color: var(--muted); opacity: 1; }
+.directory-search kbd { border: 1px solid var(--line); padding: .05rem .4rem; border-radius: 4px; line-height: 1.4; font-size: .75rem; }
+.directory-sort select, .directory-page-picker select {
+  appearance: none; width: 100%; background: transparent; color: var(--ink); cursor: pointer; outline: 0; border: 0;
+}
+.directory select option { background-color: var(--surface); color: var(--ink); }
+.directory-sort select { height: 44px; padding: 0 2rem 0 2.3rem; font-size: .85rem; font-weight: 600; }
+.directory-sort svg, .directory-page-picker svg { pointer-events: none; position: absolute; }
+.directory-sort svg:first-child { left: .8rem; } .directory-sort svg:last-child { right: .7rem; }
+.directory-search:focus-within, .directory-sort:focus-within, .directory-page-picker:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.directory :is(button, a):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.directory-results { scroll-margin-top: 5.5rem; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); overflow: clip; }
+.directory-results:focus { outline: none; }
+.directory-results:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.directory-table { width: 100%; table-layout: fixed; border-collapse: collapse; text-align: left; line-height: 1.4; }
+.directory-table th { font-size: .65rem; font-weight: 600; letter-spacing: .075em; color: var(--muted); text-transform: uppercase; background: var(--paper); }
+.directory-table th, .directory-table td { padding: 10px 14px; border: none; border-bottom: 1px solid var(--line); }
+.directory-table th:first-child { width: auto; }
+.directory-table th:nth-child(2) { width: 125px; }
+.directory-table th:nth-child(3) { width: 85px; }
+.directory-table th:nth-child(4) { width: 145px; }
+.directory-table tbody tr:last-child td { border-bottom: none; }
+.directory-table .directory-row { height: 66px; }
+.directory-table .directory-row:hover { background: color-mix(in srgb, var(--ink) 2%, var(--surface)); }
+.directory-project-inner { display: flex; gap: .75rem; align-items: center; min-width: 0; }
+.directory-project-info { min-width: 0; }
+.directory-folder { display: grid; place-items: center; flex: none; width: 35px; height: 35px; border-radius: 7px; border: 1px solid var(--line); color: var(--accent); background: var(--paper); }
+.directory-name, .directory-owner { text-decoration: none; }
+.directory-name { color: var(--ink); font-size: .9rem; font-weight: 650; overflow-wrap: anywhere; }
+.directory-name svg { display: inline-block; vertical-align: -.05em; color: var(--muted); margin-left: .22rem; }
+.directory-owner { display: block; width: fit-content; max-width: 100%; overflow-wrap: anywhere; font-size: .69rem; color: var(--muted); margin-top: .18rem; }
+.directory a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: .14em; }
+.directory-date, .directory-people, .directory-stars { font-size: .76rem; font-variant-numeric: tabular-nums; }
+.directory-date { color: var(--muted); white-space: nowrap; }
+.directory-people-button, .directory-zero, .directory-stars span { display: inline-flex; align-items: center; gap: .38rem; }
+.directory-people-button { color: var(--ink); background: transparent; border: 1px solid transparent; border-radius: 5px; min-height: 36px; margin-left: -.38rem; padding: 0 .3rem; cursor: pointer; }
+.directory-people-button:hover, .directory-people-button[aria-expanded="true"] { border-color: var(--line); background: var(--paper); }
+.directory-people-button[aria-expanded="true"] svg:last-child { transform: rotate(180deg); }
+.directory-people svg, .directory-stars svg { color: var(--muted); }
+.directory-details { background: var(--paper); }
+.directory-details td > div { display: flex; flex-wrap: wrap; gap: .35rem .8rem; align-items: baseline; }
+.directory-details strong { font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+.directory-details a { color: var(--ink); font-size: .8rem; overflow-wrap: anywhere; text-underline-offset: .2em; }
+.directory-pagination { justify-content: space-between; flex-wrap: wrap; gap: .45rem; margin-top: .85rem; }
+.directory-pagination > div { gap: .35rem; }
+.directory-pagination button, .directory-empty button {
+  display: inline-grid; place-items: center; padding: 0; border-radius: 6px; border: 1px solid var(--line);
+  background: var(--surface); color: var(--ink); cursor: pointer;
+}
+.directory-pagination button { width: 36px; height: 36px; }
+.directory-pagination button:disabled { opacity: .38; cursor: default; }
+.directory-pagination button:not(:disabled):hover, .directory-empty button:hover { background: var(--paper); border-color: var(--muted); }
+.directory-page-picker { border-radius: 6px; }
+.directory-page-picker select { height: 34px; padding: 0 1.65rem 0 .6rem; }
+.directory-page-picker svg { right: .5rem; }
+.directory-empty { display: grid; justify-items: center; padding: 3rem 1rem; color: var(--muted); }
+.directory-empty h3 { margin: .65rem 0; color: var(--ink); font-size: 1rem; }
+.directory-empty button { padding: .55rem .85rem; font-size: .8rem; }
+
+@media (max-width: 760px) {
+  .directory-table th:nth-child(2) { width: 109px; }
+  .directory-table th:nth-child(3) { width: 66px; }
+  .directory-table th:nth-child(4) { width: 111px; }
+  .directory-table th, .directory-table td { padding-left: 8px; padding-right: 8px; }
+}
+@media (max-width: 620px) {
+  .directory-heading { align-items: baseline; margin-bottom: 1rem; }
+  .directory-result-count { font-size: .68rem; }
+  .directory-tools { flex-wrap: wrap; gap: .5rem; }
+  .directory-search { flex-basis: 100%; }
+  .directory-search kbd { display: none; }
+  .directory-sort select { height: 38px; }
+  .directory-table, .directory-table tbody, .directory-table td { display: block; }
+  .directory-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .directory-table .directory-row {
+    height: auto; display: grid; grid-template-columns: max-content max-content 1fr;
+    row-gap: .25rem; column-gap: .85rem; align-items: center; padding: .8rem .9rem .55rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .directory-table .directory-row:last-child { border-bottom: 0; }
+  .directory-table .directory-row td { padding: 0; border: 0; }
+  .directory-project { grid-column: 1 / -1; }
+  .directory-project-inner { align-items: flex-start; }
+  .directory-people { margin-left: calc(35px + .75rem); }
+  .directory-date { text-align: right; }
+  .directory-details { display: block; border-bottom: 1px solid var(--line); }
+  .directory-details td { border: 0; padding: .8rem .9rem; }
+  .directory-date, .directory-stars, .directory-people { font-size: .71rem; }
+}
