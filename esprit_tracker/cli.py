@@ -1,11 +1,13 @@
 import json
 import os
 import re
-from datetime import datetime
+from datetime import date, datetime, timedelta, timezone
 from typing import List, Dict, Optional
 
 import requests
 import typer
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 from rich.console import Console
 from rich.table import Table
 
@@ -45,57 +47,69 @@ def get_github_headers():
     return headers
 
 
+# A refresh makes hundreds of requests to the same host. Reuse connections and
+# retry short-lived server errors before letting the workflow fail.
+_github = requests.Session()
+_github.mount("https://api.github.com/", HTTPAdapter(max_retries=Retry(
+    total=2, backoff_factor=1, status_forcelist=(429, 500, 502, 503, 504),
+)))
+
+
 def fetch_github_repos(query: str, per_page: int = 100) -> List[dict]:
-    repos = []
-    page = 1
-
-    while True:
-        url = "https://api.github.com/search/repositories"
-        params = {"q": query, "per_page": per_page, "page": page}
-
-        try:
-            response = requests.get(
-                url,
-                params=params,
+    def search_dates(start: date, end: date) -> List[dict]:
+        repos = []
+        page = 1
+        while True:
+            response = _github.get(
+                "https://api.github.com/search/repositories",
+                params={
+                    "q": f"{query} created:{start}..{end}",
+                    "per_page": per_page,
+                    "page": page,
+                },
                 headers=get_github_headers(),
-                timeout=10,
+                timeout=20,
             )
             response.raise_for_status()
             data = response.json()
+            if data["incomplete_results"]:
+                raise RuntimeError("GitHub returned incomplete search results. Retry the refresh.")
 
-            items = data.get("items", [])
-            if not items:
-                break
+            # GitHub exposes at most 1,000 results per search. Split busy periods
+            # into disjoint ranges before paging so older projects remain visible.
+            if data["total_count"] > 1000:
+                if start == end:
+                    raise RuntimeError(f"GitHub's 1,000-result search limit was reached on {start}.")
+                mid = start + (end - start) // 2
+                return search_dates(start, mid) + search_dates(mid + timedelta(days=1), end)
 
-            repos.extend(items)
-
-            if len(items) < per_page or len(repos) >= 1000:
-                break
-
+            repos.extend(data["items"])
+            if "next" not in response.links:
+                return repos
             page += 1
 
-        except Exception as e:
-            console.print(f"[red]Error: {e}[/red]")
-            break
-
-    return repos
+    return search_dates(date(MIN_YEAR, 1, 1), datetime.now(timezone.utc).date())
 
 
 def fetch_contributors(owner: str, repo: str) -> List[str]:
-    """Fetch contributor logins for a repository."""
     url = f"https://api.github.com/repos/{owner}/{repo}/contributors"
-    try:
-        response = requests.get(
+    contributors = []
+    page = 1
+    while True:
+        response = _github.get(
             url,
             headers=get_github_headers(),
-            params={"per_page": 100},
-            timeout=10,
+            params={"per_page": 100, "page": page},
+            timeout=20,
         )
-        if response.status_code == 200:
-            return [c.get("login", "") for c in response.json() if c.get("login")]
-        return []
-    except Exception:
-        return []
+        # Empty, deleted or taken-down repositories may still appear in search.
+        if response.status_code in (204, 404, 409, 451):
+            return []
+        response.raise_for_status()
+        contributors.extend(c["login"] for c in response.json() if c.get("login"))
+        if "next" not in response.links:
+            return contributors
+        page += 1
 
 
 # -----------------------------

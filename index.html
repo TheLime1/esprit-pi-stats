@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="./mark.svg" />
+    <meta name="description" content="Explore ESPRIT PI student projects, contributors, and repository statistics." />
+    <title>ESPRIT PI Stats · Repository explorer</title>
+    <script>
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('esprit-theme') === 'dark' ? 'dark' : 'light'
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Enable JavaScript to browse the dashboard or <a href="./data.json">download the repository snapshot</a>.</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
